@@ -1,0 +1,29 @@
+.landing-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  min-height: 90vh;
+}
+.heading-1,
+.heading-2 {
+  font-size: 7rem;
+  margin: 0px;
+  font-weight: 800;
+}
+
+.heading-2 {
+  color: var(--blue);
+}
+.span-text {
+  color: var(--textPrimary);
+}
+.heading-1:hover {
+  color: var(--black);
+  -webkit-text-stroke: 3px var(--white);
+  transition: all 0.3s;
+}
+.para {
+  color: var(--grey);
+  font-size: 1.2rem;
+}
