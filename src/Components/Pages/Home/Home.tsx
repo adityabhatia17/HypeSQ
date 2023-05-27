@@ -40,16 +40,16 @@ const Home = () => {
             One Stop Solution For All Your{" "}
             <span className="span-text">Digital</span> Needs
           </motion.p>
-          {/* <motion.div
-          className="btn-flex"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <a href="/dashboard">
+          <motion.div
+            className="btn-flex"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            {/* <a href="/dashboard">
             <Button text="Dashboard" />
-          </a>
-          <RWebShare
+          </a> */}
+            {/* <RWebShare
             data={{
               text: "Crypto Dashboard made using React JS.",
               url: "https://crypto-dashboard-dec.netlify.app/",
@@ -58,8 +58,8 @@ const Home = () => {
             onClick={() => console.log("shared successfully!")}
           >
             <Button text="Share App" outlined={true} />
-          </RWebShare>
-        </motion.div> */}
+          </RWebShare> */}
+          </motion.div>
         </div>
       </div>
     </div>

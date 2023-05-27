@@ -1,0 +1,14 @@
+.landing-wrapper {
+  padding: 1.5rem 3rem;
+  min-height: 50vh;
+  margin-top: 19rem;
+  gap: 0px;
+}
+.heading-1 {
+  margin-bottom: 0px;
+  font-size: 20px;
+  word-spacing: 5px;
+}
+.heading-2 {
+  font-size: 40px;
+}
