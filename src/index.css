@@ -9,3 +9,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
+.loader-img {
+  margin: 15rem auto;
+  width: fit-content;
+}
+.loader-img img {
+  max-width: 400px;
+}
+@media only screen and (max-width: 380px) {
+  .loader-img img {
+    max-width: 200px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .loader-img img {
+    max-width: 300px;
+  }
+}

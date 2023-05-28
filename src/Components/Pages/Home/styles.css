@@ -11,12 +11,9 @@
   margin: 0px;
   font-weight: 800;
 }
-
-.heading-2 {
-  color: var(--blue);
-}
 .span-text {
   color: var(--textPrimary);
+  font-size: 1.4rem;
 }
 .heading-1:hover {
   color: var(--black);
@@ -24,6 +21,128 @@
   transition: all 0.3s;
 }
 .para {
-  color: var(--grey);
-  font-size: 1.2rem;
+  font-size: 10rem;
+  font-size: 1.4rem;
+}
+.landing-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  position: relative;
+}
+
+.gradient {
+  position: absolute;
+  max-width: 300px;
+  top: 6rem;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.iphone {
+  position: absolute;
+  max-width: 380px;
+  object-fit: contain;
+  z-index: 1;
+  right: 0rem;
+}
+.btn-flex {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.home-links-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  gap: 40px;
+}
+.home-links-flex a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--textPrimary);
+  font-size: 1.4rem;
+}
+.home-links-flex a:hover {
+  color: black;
+  transition: all 0.5s;
+}
+@media only screen and (max-width: 1250px) {
+  .landing-left {
+    width: 60%;
+  }
+
+  .gradient {
+    max-width: 250px;
+    top: 4rem;
+  }
+  .iphone {
+    max-width: 300px;
+  }
+  .heading-1,
+  .heading-2 {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .gradient {
+    max-width: 230px;
+    top: 3rem;
+  }
+  .iphone {
+    max-width: 280px;
+  }
+  .heading-1,
+  .heading-2 {
+    font-size: 4rem;
+  }
+  .para {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .landing-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .landing-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .landing-right {
+    justify-content: center;
+    margin-right: auto;
+    margin-top: 4rem;
+  }
+
+  .iphone {
+    left: auto;
+    right: auto;
+  }
+
+  .heading-1,
+  .heading-2 {
+    font-size: 3rem;
+  }
+  .para {
+    font-size: 0.8rem;
+  }
+  .btn-flex {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .landing-wrapper {
+    height: 120vh;
+  }
 }

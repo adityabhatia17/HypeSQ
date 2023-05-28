@@ -1,12 +1,14 @@
+import { motion } from "framer-motion";
+import picBg from "../../../Assets/png/picBg.png";
 import { HypeSQLogo } from "../../../Assets/svg";
 import NavBar from "../../App/Layout";
-import { motion } from "framer-motion";
 import "./styles.css";
+import { HiArrowUpRight } from "react-icons/hi2";
 
 const Home = () => {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="landing-wrapper">
         <div className="landing-left">
           <motion.h1
@@ -24,10 +26,8 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-              <div>A</div>
-              <div>
-                <HypeSQLogo width={100} />
-              </div>
+              <div>a</div>
+              <HypeSQLogo width={100} />
               <div>tive</div>
             </div>
           </motion.h1>
@@ -36,9 +36,10 @@ const Home = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            style={{ fontSize: "1.4rem" }}
           >
-            One Stop Solution For All Your{" "}
-            <span className="span-text">Digital</span> Needs
+            One Stop Solution For All Your
+            <span className="span-text"> Digital</span> Needs
           </motion.p>
           <motion.div
             className="btn-flex"
@@ -46,20 +47,59 @@ const Home = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            {/* <a href="/dashboard">
-            <Button text="Dashboard" />
-          </a> */}
-            {/* <RWebShare
-            data={{
-              text: "Crypto Dashboard made using React JS.",
-              url: "https://crypto-dashboard-dec.netlify.app/",
-              title: "CryptoDashboard.",
-            }}
-            onClick={() => console.log("shared successfully!")}
-          >
-            <Button text="Share App" outlined={true} />
-          </RWebShare> */}
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                justifyContent: "space-between",
+              }}
+            >
+              <div
+                style={{
+                  width: "30%",
+                  backgroundColor: "#FF0042",
+                  height: "2px",
+                }}
+              ></div>
+              <div
+                style={{
+                  width: "30%",
+                  backgroundColor: "#FF0042",
+                  height: "2px",
+                }}
+              ></div>
+            </div>
           </motion.div>
+          <motion.div
+            className="home-links-flex"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <a href="/portfolio">
+              <HiArrowUpRight />
+              Latest Work
+            </a>
+            <a href="/portfolio">
+              <HiArrowUpRight />
+              Latest Work
+            </a>
+          </motion.div>
+        </div>
+        <div className="landing-right">
+          <img src={picBg} className="gradient" />
+          <motion.img
+            src={picBg}
+            className="iphone"
+            initial={{ y: -10 }}
+            animate={{ y: 10 }}
+            transition={{
+              type: "smooth",
+              repeatType: "mirror",
+              duration: 2,
+              repeat: Infinity,
+            }}
+          />
         </div>
       </div>
     </div>
