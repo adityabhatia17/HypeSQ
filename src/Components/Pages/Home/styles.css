@@ -2,14 +2,18 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 6rem;
   min-height: 90vh;
 }
 .heading-1,
 .heading-2 {
-  font-size: 7rem;
+  font-size: 6.5rem;
   margin: 0px;
   font-weight: 800;
+  line-height: 1.15312464em;
+}
+.heading-2 {
+  letter-spacing: 0.03em;
 }
 .span-text {
   color: var(--textPrimary);
@@ -111,6 +115,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding: 1.5rem 3rem;
   }
 
   .landing-left {

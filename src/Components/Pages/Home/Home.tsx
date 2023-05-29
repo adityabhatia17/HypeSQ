@@ -25,9 +25,11 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
               <div>a</div>
-              <HypeSQLogo width={100} />
+              <div style={{ marginTop: "28px" }}>
+                <HypeSQLogo width={132} />
+              </div>
               <div>tive</div>
             </div>
           </motion.h1>
@@ -78,7 +80,7 @@ const Home = () => {
           >
             <a href="/portfolio">
               <HiArrowUpRight />
-              Latest Work
+              Watch Agency Reel
             </a>
             <a href="/portfolio">
               <HiArrowUpRight />

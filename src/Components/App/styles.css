@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   background-color: white;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,6 +12,7 @@
 .header h1 {
   margin: 0;
   font-size: 1.3rem;
+  letter-spacing: 0.1em;
 }
 
 .links-flex {

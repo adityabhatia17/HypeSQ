@@ -14,16 +14,16 @@ const EnquiryForm = () => {
         Enquiry
       </button>
       <div className="form-content">
-        <form>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
+        <p style={{ color: "white" }}>
+          Fill in the details below and one of our executives will get back to
+          you shortly. ⚡
+        </p>
+        <form className="enquiryForm">
+          <input placeholder="name"></input>
+          <input placeholder="Number"></input>
+          <input placeholder="Email"></input>
+          {/* Dropdown: Marketing, Collaboration, Career */}
+          <input placeholder="Select Category"></input>
         </form>
       </div>
     </div>
