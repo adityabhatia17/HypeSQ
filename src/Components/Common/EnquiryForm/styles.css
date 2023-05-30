@@ -9,9 +9,26 @@
   transition: transform 0.5s;
   z-index: 999;
 }
+/* .enquiryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} */
+.enquiryForm input {
+  border: none;
+  border-bottom-color: white;
+  color: white;
+  padding: 10px 20px;
+  outline: none;
+  font-size: 1rem;
+}
+.enquiryForm input:focus {
+  border-bottom-color: #5a5a5a;
+  transition: all 2s;
+}
 
 .enquiry-form.open {
-  transform: translateY(-300%);
+  transform: translateY(-520%);
 }
 
 .toggle-btn {
@@ -45,7 +62,7 @@
 @keyframes revealContent {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(fit-content);
   }
   100% {
     opacity: 1;
@@ -55,4 +72,7 @@
 
 .enquiry-form.open .form-content {
   display: block;
+}
+.ant-form-item .ant-form-item-label > label {
+  color: white;
 }

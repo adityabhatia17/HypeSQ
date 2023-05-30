@@ -1,13 +1,26 @@
-import React, { useState } from "react";
+import { useTheme } from "@mui/material";
+import { useState } from "react";
 import "./styles.css";
+import { Form, Input, Select } from "antd";
+import classNames from "classnames";
+
+const { Option } = Select;
 
 const EnquiryForm = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const outerTheme = useTheme();
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
   };
-
+  const prefixSelector = (
+    <Form.Item name="prefix" noStyle>
+      <Select style={{ width: 70 }}>
+        <Option value="86">+86</Option>
+        <Option value="87">+87</Option>
+      </Select>
+    </Form.Item>
+  );
   return (
     <div className={`enquiry-form ${isOpen ? "open" : ""}`}>
       <button className="toggle-btn" onClick={toggleForm}>
@@ -18,13 +31,45 @@ const EnquiryForm = () => {
           Fill in the details below and one of our executives will get back to
           you shortly. ⚡
         </p>
-        <form className="enquiryForm">
-          <input placeholder="name"></input>
-          <input placeholder="Number"></input>
-          <input placeholder="Email"></input>
+        <Form>
+          <Form.Item
+            name="name"
+            label="Name"
+            rules={[{ required: true, message: "Please input your name!" }]}
+            style={{ color: "white" }}
+          >
+            <Input style={{ color: "white" }} placeholder="Hello" />
+          </Form.Item>
+          <Form.Item
+            name="phone"
+            label="Phone Number"
+            rules={[
+              { required: true, message: "Please input your phone number!" },
+            ]}
+            style={{ color: "white" }}
+          >
+            <Input
+              addonBefore={prefixSelector}
+              style={{ color: "white" }}
+              placeholder="Phone Number"
+            />
+          </Form.Item>
+          <Form.Item
+            name="email"
+            label="Email"
+            rules={[
+              { required: true, message: "Please input your valid email!" },
+              {
+                type: "email",
+                message: "The input is not valid E-mail!",
+              },
+            ]}
+            style={{ color: "white" }}
+          >
+            <Input style={{ color: "white" }} placeholder="Hello" />
+          </Form.Item>
           {/* Dropdown: Marketing, Collaboration, Career */}
-          <input placeholder="Select Category"></input>
-        </form>
+        </Form>
       </div>
     </div>
   );

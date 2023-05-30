@@ -1,11 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Comingsoon from "./Components/Pages/ComingSoon/Comingsoon";
-import Home from "./Components/Pages/Home/Home";
 import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import hypGif from "./Assets/gif/SMS-HEG.gif";
-import Portfolio from "./Components/Pages/Portfolio/Portfolio";
 import NavBar from "./Components/App/Layout";
 import EnquiryForm from "./Components/Common/EnquiryForm/EnquiryForm";
+import Home from "./Components/Pages/Home/Home";
+import Portfolio from "./Components/Pages/Portfolio/Portfolio";
 
 const App = () => {
   const [showGif, setShowGif] = useState(true);
