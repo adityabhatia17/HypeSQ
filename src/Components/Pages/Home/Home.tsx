@@ -7,18 +7,15 @@ import { howWeMarketList } from "./data";
 import { AiOutlineArrowRight, AiOutlinePlus } from "react-icons/ai";
 import { useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import PastWorq from "./PastWorq";
 
 const Home = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [showBar, setShowBar] = useState<number | null>(null);
+  const [isClicked, setIsClicked] = useState(false);
 
-  const textVariants = {
-    initial: {
-      color: "black",
-    },
-    hover: {
-      color: "#ff0042",
-    },
+  const handleClick = () => {
+    setIsClicked(true);
   };
 
   const handleMouseEnter = (index: number) => {
@@ -31,7 +28,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* <NavBar /> */}
       <div className="landing-wrapper">
         <div className="landing-left">
           <motion.h1
@@ -136,23 +132,24 @@ const Home = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                   style={{
-                    width: "100vw",
-                    zIndex: 1,
                     backgroundColor: `${i.color}`,
+                    width: "100vw",
                   }}
                 >
-                  <motion.div
-                    style={{ marginRight: "10px", marginLeft: "30px" }}
-                    initial={{ x: 0 }}
-                    animate={{ x: 10 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <FiArrowUpRight
-                      style={{ color: "white", cursor: "pointer" }}
-                      onClick={() => setShowBar(null)}
-                    />
-                  </motion.div>
-                  <p style={{ color: "white" }}>{i.itemName}</p>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <motion.div
+                      style={{ marginRight: "10px", marginLeft: "30px" }}
+                      initial={{ x: 0 }}
+                      animate={{ x: 10 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <FiArrowUpRight
+                        style={{ color: "white", cursor: "pointer" }}
+                        onClick={() => setShowBar(null)}
+                      />
+                    </motion.div>
+                    <p style={{ color: "white" }}>{i.itemName}</p>
+                  </div>
                 </motion.div>
               ) : (
                 <motion.div
@@ -174,7 +171,10 @@ const Home = () => {
                         >
                           <AiOutlinePlus
                             style={{ color: `${i.color}`, cursor: "pointer" }}
-                            onClick={() => setShowBar(k)}
+                            onClick={() => {
+                              setShowBar(k);
+                              handleClick();
+                            }}
                           />
                         </motion.div>
                         <p style={{ color: `${i.color}` }}>{i.itemName}</p>
@@ -191,7 +191,7 @@ const Home = () => {
             )}
           </div>
         </div>
-        <div className="landing-right" style={{ zIndex: 0 }}>
+        <div className="landing-right">
           <motion.p style={{ color: "#1DA1F2", fontSize: "1.5rem" }}>
             #hypeitup
           </motion.p>
@@ -230,6 +230,7 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
+      <PastWorq />
     </div>
   );
 };

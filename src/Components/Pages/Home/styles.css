@@ -4,7 +4,10 @@
   justify-content: space-between;
   padding: 1.5rem 10rem;
   min-height: 90vh;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
+}
+.landing-left-worq {
+  padding: 1.5rem 10rem;
 }
 .heading-1,
 .heading-2 {
