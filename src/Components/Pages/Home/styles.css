@@ -2,14 +2,14 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.5rem 10rem;
+  padding: 1.5rem 9rem;
   min-height: 90vh;
   margin-bottom: 1.8rem;
 }
 
 .heading-1,
 .heading-2 {
-  font-size: 6.5rem;
+  font-size: 5.8rem;
   margin: 0px;
   font-weight: 800;
   line-height: 1.15312464em;
@@ -27,7 +27,6 @@
   transition: all 0.3s;
 }
 .para {
-  font-size: 10rem;
   font-size: 1.4rem;
 }
 .landing-right {
@@ -35,6 +34,9 @@
   flex-direction: column;
   margin-left: auto;
   align-items: left;
+}
+.q-class {
+  width: 5.8rem;
 }
 
 .gradient {
@@ -70,6 +72,28 @@
   color: black;
   transition: all 0.5s;
 }
+
+/* how we market */
+.landing-wrapper-market {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 9rem;
+  min-height: 90vh;
+  margin-bottom: 1.8rem;
+}
+
+.landing-right-market {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  align-items: left;
+  position: absolute;
+}
+.landing-left-market {
+  position: absolute;
+}
+
 .how-we-market-list {
   display: flex;
   flex-direction: column;
@@ -81,6 +105,11 @@
   display: flex;
   align-items: center;
   gap: 4px;
+}
+.para-market {
+  width: 30rem;
+  line-height: 1.15312464em;
+  font-size: 1.4rem;
 }
 
 /* Past Worq Screen Styles */
@@ -99,6 +128,15 @@
   padding: 0 10rem 0 0;
 }
 
+/* Our Spectacular Clients Styles */
+.landing-clients-wrapper {
+  padding: 1.5rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1250px) {
   .landing-left {
     width: 60%;
@@ -115,6 +153,9 @@
   .heading-2 {
     font-size: 5rem;
   }
+  .q-class {
+    width: 5rem;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -129,6 +170,9 @@
   .heading-2 {
     font-size: 4rem;
   }
+  .q-class {
+    width: 4rem;
+  }
   .para {
     font-size: 1rem;
   }
@@ -141,13 +185,34 @@
     justify-content: flex-start;
     padding: 1.5rem 3rem;
   }
+  .landing-wrapper-market {
+    flex-wrap: wrap-reverse;
+    padding: 1.5rem 3rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .para-market {
+    font-size: 1rem;
+    width: 20rem;
+  }
 
   .landing-left {
     width: 100%;
     text-align: center;
   }
+  .landing-left-market {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
 
   .landing-right {
+    justify-content: center;
+    margin-right: auto;
+    margin-top: 4rem;
+  }
+  .landing-right-market {
+    position: static;
     justify-content: center;
     margin-right: auto;
     margin-top: 4rem;
@@ -162,11 +227,19 @@
   .heading-2 {
     font-size: 3rem;
   }
+  .q-class {
+    width: 3rem;
+  }
   .para {
     font-size: 0.8rem;
   }
   .btn-flex {
     justify-content: center;
+  }
+  .how-we-market-list {
+    margin-top: 30px;
+    font-size: 1rem;
+    gap: 50px;
   }
 }
 

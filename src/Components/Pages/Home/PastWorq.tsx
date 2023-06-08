@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { HypeSQBLogo, HypeSQLogo } from "../../../Assets/svg";
-import { ourPastWorqData } from "./data";
-import { FiArrowUpRight } from "react-icons/fi";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { useState } from "react";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { FiArrowUpRight } from "react-icons/fi";
+import { HypeSQLogo } from "../../../Assets/svg";
+import { ourPastWorqData } from "./data";
 import "./styles.css";
 
 const PastWorq = () => {
@@ -43,8 +43,8 @@ const PastWorq = () => {
           >
             <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
               <div>wor</div>
-              <div style={{ marginTop: "28px" }}>
-                <HypeSQLogo width={132} />
+              <div style={{ marginTop: "20px" }}>
+                <HypeSQLogo className="q-class" />
               </div>
             </div>
           </motion.h1>
