@@ -13,6 +13,7 @@ const Home = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [showBar, setShowBar] = useState<number | null>(null);
   const [isClicked, setIsClicked] = useState(false);
+  const [opacity, setOpacity] = useState(1);
 
   const handleClick = () => {
     setIsClicked(true);
@@ -123,18 +124,22 @@ const Home = () => {
         </div>
       </div>
       <div className="landing-wrapper">
-        <div className="landing-left">
+        <div
+          className="landing-left"
+          style={{ position: "absolute", zIndex: 80 }}
+        >
           <div className="how-we-market-list">
             {howWeMarketList.map((i, k) =>
               showBar === k ? (
                 <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  style={{
-                    backgroundColor: `${i.color}`,
+                  initial={{ opacity: 0, x: 0 }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
                     width: "100vw",
+                    backgroundColor: `${i.color}`,
                   }}
+                  transition={{ duration: 0.5 }}
                 >
                   <div style={{ display: "flex", alignItems: "center" }}>
                     <motion.div
@@ -191,7 +196,14 @@ const Home = () => {
             )}
           </div>
         </div>
-        <div className="landing-right">
+        <div
+          className="landing-right"
+          style={{
+            position: "absolute",
+            right: "8%",
+            opacity: showBar == null ? 1 : 0.5,
+          }}
+        >
           <motion.p style={{ color: "#1DA1F2", fontSize: "1.5rem" }}>
             #hypeitup
           </motion.p>

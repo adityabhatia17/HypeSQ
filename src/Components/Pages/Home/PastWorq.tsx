@@ -7,14 +7,14 @@ import { useState } from "react";
 import "./styles.css";
 
 const PastWorq = () => {
-  const [hoveredIdx, setHoveredIdx] = useState<number>(-1);
+  const [hoveredIdx, setHoveredIdx] = useState<number>(0);
 
   const handleMouseEnter = (idx: number) => {
     setHoveredIdx(idx);
   };
 
   const handleMouseLeave = () => {
-    setHoveredIdx(-1);
+    setHoveredIdx(0);
   };
   return (
     <div className="landing-wrapper-worq">
@@ -93,7 +93,7 @@ const PastWorq = () => {
           ))}
         </div>
       </div>
-      <div className="landing-right">some image</div>
+      <div className="landing-right-worq">some image</div>
     </div>
   );
 };
