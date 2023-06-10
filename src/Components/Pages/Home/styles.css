@@ -2,14 +2,14 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.5rem 10rem;
+  padding: 1.5rem 9rem;
   min-height: 90vh;
   margin-bottom: 1.8rem;
 }
 
 .heading-1,
 .heading-2 {
-  font-size: 6.5rem;
+  font-size: 5.8rem;
   margin: 0px;
   font-weight: 800;
   line-height: 1.15312464em;
@@ -27,7 +27,6 @@
   transition: all 0.3s;
 }
 .para {
-  font-size: 10rem;
   font-size: 1.4rem;
 }
 .landing-right {
@@ -35,6 +34,9 @@
   flex-direction: column;
   margin-left: auto;
   align-items: left;
+}
+.q-class {
+  width: 5.8rem;
 }
 
 .gradient {
@@ -70,6 +72,28 @@
   color: black;
   transition: all 0.5s;
 }
+
+/* how we market */
+.landing-wrapper-market {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 9rem;
+  min-height: 90vh;
+  margin-bottom: 1.8rem;
+}
+
+.landing-right-market {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  align-items: left;
+  position: absolute;
+}
+.landing-left-market {
+  position: absolute;
+}
+
 .how-we-market-list {
   display: flex;
   flex-direction: column;
@@ -82,6 +106,11 @@
   align-items: center;
   gap: 4px;
 }
+.para-market {
+  width: 30rem;
+  line-height: 1.15312464em;
+  font-size: 1.4rem;
+}
 
 /* Past Worq Screen Styles */
 .landing-wrapper-worq {
@@ -92,13 +121,93 @@
   margin-bottom: 1.8rem;
 }
 .landing-left-worq {
-  padding: 0 0 0 10rem;
+  padding: 2rem 5rem 2rem 10rem;
   width: 50rem;
 }
 .landing-right-worq {
   padding: 0 10rem 0 0;
 }
 
+/* Our Spectacular Clients Styles */
+.landing-clients-wrapper {
+  padding: 1.5rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading-clients {
+  font-size: 4.2rem;
+  margin: 0px;
+  font-weight: 800;
+  line-height: 1.15312464em;
+}
+
+.landing-clients-right {
+  display: flex;
+  margin-left: 24rem;
+  align-items: left;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.clients {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.row-1,
+.row-2 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.client-logo {
+  filter: grayscale(1);
+  transition: transform 0.3s ease;
+  width: 20rem;
+  height: 25rem;
+}
+.client-logo:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+/* Landing Footer Wrapper */
+.landing-footer-wrapper {
+  background-color: #000000;
+  min-height: 60vh;
+  padding: 4rem 9rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.landing-footer-left {
+  color: white;
+  padding-left: 2rem;
+}
+.footer-heading {
+  color: #6bdfa1;
+}
+.landing-footer-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rem;
+  align-items: left;
+  padding: 5rem;
+}
+.big-text-footer {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.q-class-footer {
+  width: 3rem;
+}
 @media only screen and (max-width: 1250px) {
   .landing-left {
     width: 60%;
@@ -115,6 +224,9 @@
   .heading-2 {
     font-size: 5rem;
   }
+  .q-class {
+    width: 5rem;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -129,6 +241,9 @@
   .heading-2 {
     font-size: 4rem;
   }
+  .q-class {
+    width: 4rem;
+  }
   .para {
     font-size: 1rem;
   }
@@ -141,13 +256,34 @@
     justify-content: flex-start;
     padding: 1.5rem 3rem;
   }
+  .landing-wrapper-market {
+    flex-wrap: wrap-reverse;
+    padding: 1.5rem 3rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .para-market {
+    font-size: 1rem;
+    width: 20rem;
+  }
 
   .landing-left {
     width: 100%;
     text-align: center;
   }
+  .landing-left-market {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
 
   .landing-right {
+    justify-content: center;
+    margin-right: auto;
+    margin-top: 4rem;
+  }
+  .landing-right-market {
+    position: static;
     justify-content: center;
     margin-right: auto;
     margin-top: 4rem;
@@ -162,11 +298,19 @@
   .heading-2 {
     font-size: 3rem;
   }
+  .q-class {
+    width: 3rem;
+  }
   .para {
     font-size: 0.8rem;
   }
   .btn-flex {
     justify-content: center;
+  }
+  .how-we-market-list {
+    margin-top: 30px;
+    font-size: 1rem;
+    gap: 50px;
   }
 }
 
