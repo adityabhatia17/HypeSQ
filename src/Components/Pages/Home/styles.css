@@ -154,22 +154,22 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  /* gap: 10px; */
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 .row-1,
 .row-2 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 50px;
 }
 .client-logo {
   filter: grayscale(1);
   transition: transform 0.3s ease;
   width: 20rem;
-  height: 25rem;
+  height: 15rem;
 }
 .client-logo:hover {
   filter: grayscale(0);
@@ -195,12 +195,11 @@
 .landing-footer-right {
   display: flex;
   flex-direction: column;
-  margin-left: 20rem;
-  align-items: left;
+  align-items: right;
   padding: 5rem;
 }
 .big-text-footer {
-  font-size: 3rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -208,9 +207,76 @@
 .q-class-footer {
   width: 3rem;
 }
+.socials-footer .socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-buttons {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 1.6875rem;
+  text-align: center;
+  color: white;
+  transition: all 0.6s ease;
+}
+.social-buttons:hover,
+.social-buttons:focus {
+  background-color: white;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+.icon {
+  margin-top: 15px;
+}
+.facebook {
+  background-color: #3b5998;
+}
+.facebook:hover,
+.facebook:focus {
+  color: #3b5998;
+  /* border: 2px solid #3b5998; */
+}
+.twitter {
+  background-color: #55acee;
+}
+.twitter:hover,
+.twitter:focus {
+  color: #55acee;
+}
+.instagram {
+  background-color: #007bb5;
+}
+.instagram:hover,
+.instagram:focus {
+  color: #007bb5;
+}
+.youtube {
+  background-color: #bb0000;
+}
+.youtube:hover,
+.youtube:focus {
+  color: #bb0000;
+}
+
+.linkedin {
+  background-color: #007bb5;
+}
+
+.linkedin:hover,
+.linkedin:focus {
+  color: #007bb5;
+}
+
 @media only screen and (max-width: 1250px) {
   .landing-left {
     width: 60%;
+  }
+  .landing-footer-left {
+    width: 60%;
+    padding-left: 0;
   }
 
   .gradient {
@@ -223,6 +289,9 @@
   .heading-1,
   .heading-2 {
     font-size: 5rem;
+  }
+  .big-text-footer {
+    font-size: 2rem;
   }
   .q-class {
     width: 5rem;

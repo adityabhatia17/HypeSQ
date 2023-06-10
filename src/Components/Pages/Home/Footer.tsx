@@ -1,9 +1,11 @@
+import { AiFillYoutube } from "react-icons/ai";
 import {
-  HypeSQBLogo,
-  HypeSQGLogo,
-  HypeSQGreen,
-  HypeSQLogo,
-} from "../../../Assets/svg";
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+import { HypeSQGLogo, HypeSQGreen } from "../../../Assets/svg";
 
 const Footer = () => {
   return (
@@ -22,6 +24,26 @@ const Footer = () => {
             reate Something Awesome!
           </span>
         </h1>
+        <div className="socials-footer">
+          <h2 style={{ color: "#ff6d1a" }}>Socials</h2>
+          <div className="socials">
+            <div className="social-buttons facebook">
+              <FaFacebookF className="icon" />
+            </div>
+            <div className="social-buttons twitter">
+              <FaTwitter className="icon" />
+            </div>
+            <div className="social-buttons instagram">
+              <FaInstagram className="icon" />
+            </div>
+            <div className="social-buttons youtube">
+              <AiFillYoutube className="icon" />
+            </div>
+            <div className="social-buttons linkedin">
+              <FaLinkedin className="icon" />
+            </div>
+          </div>
+        </div>
       </div>
       <div className="landing-footer-right">
         <HypeSQGreen />
