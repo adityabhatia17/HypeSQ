@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import { HiArrowUpRight } from "react-icons/hi2";
 import picBg from "../../../Assets/png/picBg.png";
 import { HypeSQLogo } from "../../../Assets/svg";

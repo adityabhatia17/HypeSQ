@@ -121,7 +121,7 @@
   margin-bottom: 1.8rem;
 }
 .landing-left-worq {
-  padding: 0 0 0 10rem;
+  padding: 2rem 5rem 2rem 10rem;
   width: 50rem;
 }
 .landing-right-worq {
@@ -136,7 +136,78 @@
   align-items: center;
   justify-content: center;
 }
+.heading-clients {
+  font-size: 4.2rem;
+  margin: 0px;
+  font-weight: 800;
+  line-height: 1.15312464em;
+}
 
+.landing-clients-right {
+  display: flex;
+  margin-left: 24rem;
+  align-items: left;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.clients {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.row-1,
+.row-2 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.client-logo {
+  filter: grayscale(1);
+  transition: transform 0.3s ease;
+  width: 20rem;
+  height: 25rem;
+}
+.client-logo:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+/* Landing Footer Wrapper */
+.landing-footer-wrapper {
+  background-color: #000000;
+  min-height: 60vh;
+  padding: 4rem 9rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.landing-footer-left {
+  color: white;
+  padding-left: 2rem;
+}
+.footer-heading {
+  color: #6bdfa1;
+}
+.landing-footer-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rem;
+  align-items: left;
+  padding: 5rem;
+}
+.big-text-footer {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.q-class-footer {
+  width: 3rem;
+}
 @media only screen and (max-width: 1250px) {
   .landing-left {
     width: 60%;
