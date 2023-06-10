@@ -1,18 +1,16 @@
-import { useTheme } from "@mui/material";
+import { Form, Input, Select } from "antd";
 import { useState } from "react";
 import "./styles.css";
-import { Form, Input, Select } from "antd";
-import classNames from "classnames";
 
 const { Option } = Select;
 
 const EnquiryForm = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const outerTheme = useTheme();
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
   };
+
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
       <Select style={{ width: 70 }}>
@@ -21,6 +19,7 @@ const EnquiryForm = () => {
       </Select>
     </Form.Item>
   );
+
   return (
     <div className={`enquiry-form ${isOpen ? "open" : ""}`}>
       <button className="toggle-btn" onClick={toggleForm}>

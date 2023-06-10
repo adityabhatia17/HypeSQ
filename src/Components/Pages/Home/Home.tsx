@@ -201,7 +201,7 @@ const Home = () => {
           style={{
             position: "absolute",
             right: "8%",
-            opacity: showBar == null ? 1 : 0.5,
+            opacity: showBar == null ? 1 : 0,
           }}
         >
           <motion.p style={{ color: "#1DA1F2", fontSize: "1.5rem" }}>
@@ -232,7 +232,7 @@ const Home = () => {
           <motion.div
             style={{
               width: "30rem",
-              lineHeight: "line-height: 1.15312464em",
+              lineHeight: "1.15312464em",
               fontSize: "1.4rem",
             }}
           >

@@ -3,7 +3,6 @@
   font-size: 0.9rem;
   background-color: var(--textPrimary);
   border: 2px solid var(--textPrimary);
-  border-radius: 3rem;
   cursor: pointer;
   font-weight: 600;
   width: fit-content;
