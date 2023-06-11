@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="landing-footer-wrapper">
       <div className="landing-footer-left">
         <h1 className="footer-heading">About Us</h1>
-        <p className="para" style={{ paddingRight: "3rem" }}>
+        <p className="para">
           We at HYPESQUARE are committed to providing an impeccable digital
           experience to our clients across the private, public, and social
           sectors to create a remarkable online presence.
@@ -21,7 +21,7 @@ const Footer = () => {
           <span>Let's </span>
           <span style={{ display: "flex", alignItems: "center" }}>
             <HypeSQGLogo className="q-class-footer" />
-            reate Something Awesome!
+            <div>reate Something Awesome!</div>
           </span>
         </h1>
         <div className="socials-footer">
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="landing-footer-right">
-        <HypeSQGreen />
+        <HypeSQGreen className="clients-logo" />
       </div>
     </div>
   );

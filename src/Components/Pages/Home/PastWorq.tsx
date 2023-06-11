@@ -93,7 +93,6 @@ const PastWorq = () => {
           ))}
         </div>
       </div>
-      <div className="landing-right-worq">some image</div>
     </div>
   );
 };

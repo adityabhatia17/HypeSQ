@@ -121,8 +121,8 @@
   margin-bottom: 1.8rem;
 }
 .landing-left-worq {
-  padding: 2rem 5rem 2rem 10rem;
-  width: 50rem;
+  padding: 1.5rem 10rem;
+  width: 100%;
 }
 .landing-right-worq {
   padding: 0 10rem 0 0;
@@ -154,16 +154,13 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
   align-items: center;
-  /* flex-wrap: wrap; */
 }
-.row-1,
-.row-2 {
+.row-1 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 20px;
 }
 .client-logo {
   filter: grayscale(1);
@@ -290,11 +287,21 @@
   .heading-2 {
     font-size: 5rem;
   }
+  .heading-clients {
+    font-size: 4rem;
+  }
   .big-text-footer {
     font-size: 2rem;
   }
   .q-class {
-    width: 5rem;
+    width: 4rem;
+  }
+  .client-logo {
+    width: 12rem;
+  }
+  .row-1,
+  .row-2 {
+    gap: 30px;
   }
 }
 
@@ -310,11 +317,20 @@
   .heading-2 {
     font-size: 4rem;
   }
+  .heading-clients {
+    font-size: 2.2rem;
+  }
   .q-class {
     width: 4rem;
   }
   .para {
     font-size: 1rem;
+  }
+  .client-logo {
+    width: 10rem;
+  }
+  .big-text-footer {
+    font-size: 1.5rem;
   }
 }
 
@@ -325,12 +341,32 @@
     justify-content: flex-start;
     padding: 1.5rem 3rem;
   }
+  .landing-clients-wrapper {
+    padding: 1.5rem 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .landing-wrapper-market {
     flex-wrap: wrap-reverse;
     padding: 1.5rem 3rem;
     align-items: center;
     justify-content: flex-start;
   }
+
+  .landing-footer-wrapper {
+    padding: 1.5rem 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .landing-footer-left {
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+
   .para-market {
     font-size: 1rem;
     width: 20rem;
@@ -345,6 +381,10 @@
     width: 100%;
     text-align: center;
   }
+  .big-text-footer {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
 
   .landing-right {
     justify-content: center;
@@ -357,6 +397,9 @@
     margin-right: auto;
     margin-top: 4rem;
   }
+  .landing-footer-right {
+    justify-content: center;
+  }
 
   .iphone {
     left: auto;
@@ -367,8 +410,15 @@
   .heading-2 {
     font-size: 3rem;
   }
+  .heading-clients {
+    font-size: 1.6rem;
+  }
+
   .q-class {
-    width: 3rem;
+    width: 2.5rem;
+  }
+  .q-class-footer {
+    width: 1.2rem;
   }
   .para {
     font-size: 0.8rem;
@@ -381,10 +431,19 @@
     font-size: 1rem;
     gap: 50px;
   }
+  .socials-footer .socials {
+    justify-content: space-around;
+  }
 }
 
 @media only screen and (max-width: 380px) {
   .landing-wrapper {
     height: 120vh;
+  }
+  .landing-clients-wrapper {
+    height: 120vh;
+  }
+  .client-logo {
+    width: 8rem;
   }
 }
