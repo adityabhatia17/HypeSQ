@@ -1,0 +1,44 @@
+/* Our Spectacular Clients Styles */
+.landing-clients-wrapper {
+  padding: 1.5rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading-clients {
+  font-size: 4.2rem;
+  margin: 0px;
+  font-weight: 800;
+  line-height: 1.15312464em;
+}
+
+.landing-clients-right {
+  display: flex;
+  margin-left: 24rem;
+  align-items: left;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.clients {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row-1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.client-logo {
+  filter: grayscale(1);
+  transition: transform 0.3s ease;
+  width: 20rem;
+  height: 15rem;
+}
+.client-logo:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}

@@ -2,9 +2,10 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FiArrowUpRight } from "react-icons/fi";
-import { HypeSQLogo } from "../../../Assets/svg";
-import { ourPastWorqData } from "./data";
-import "./styles.css";
+import { HypeSQLogo } from "../../../../Assets/svg";
+import { ourPastWorqData } from "../data";
+import "../styles.css";
+import "./styles/pastwork.css";
 
 const PastWorq = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number>(0);

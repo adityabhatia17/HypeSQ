@@ -16,6 +16,12 @@ body {
 .loader-img img {
   max-width: 400px;
 }
+@supports (-webkit-appearance: none) {
+  body {
+    font-family: "Montserrat", "Montserrat", sans-serif;
+  }
+}
+
 @media only screen and (max-width: 380px) {
   .loader-img img {
     max-width: 200px;

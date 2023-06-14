@@ -5,7 +5,8 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
-import { HypeSQGLogo, HypeSQGreen } from "../../../Assets/svg";
+import { HypeSQGLogo, HypeSQGreen } from "../../../../Assets/svg";
+import "./styles/footer.css";
 
 const Footer = () => {
   return (

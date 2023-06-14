@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import "./styles.css";
+import "../styles.css";
+import "./styles/spectacularClients.css";
 import {
   BharatBazar,
   Cardiologix,
@@ -8,7 +9,7 @@ import {
   Medanta,
   SMSHEG,
   StarSmiles,
-} from "../../../Assets/svg";
+} from "../../../../Assets/svg";
 
 const SpectacularClients = () => {
   return (

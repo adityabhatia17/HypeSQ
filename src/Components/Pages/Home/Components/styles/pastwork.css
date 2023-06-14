@@ -1,0 +1,16 @@
+/* Past Worq Screen Styles */
+.landing-wrapper-worq {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 90vh;
+  margin-bottom: 1.8rem;
+  width: 100%;
+}
+.landing-left-worq {
+  padding: 1.5rem 10rem;
+  width: 100%;
+}
+.landing-right-worq {
+  padding: 0 10rem 0 0;
+}

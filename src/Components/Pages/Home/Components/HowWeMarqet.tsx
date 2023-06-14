@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { howWeMarketList } from "./data";
-import { AiOutlineArrowRight, AiOutlinePlus } from "react-icons/ai";
 import { useState } from "react";
+import { AiOutlineArrowRight, AiOutlinePlus } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
-import { HypeSQBLogo, HypeSQLogo } from "../../../Assets/svg";
-import "./styles.css";
+import { HypeSQBLogo } from "../../../../Assets/svg";
+import { howWeMarketList } from "../data";
+import "../styles.css";
+import "./styles/howWeMarqet.css";
 
 const HowWeMarqet = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [showBar, setShowBar] = useState<number | null>(null);
   const [isClicked, setIsClicked] = useState(false);
-  const [opacity, setOpacity] = useState(1);
 
   const handleClick = () => {
     setIsClicked(true);

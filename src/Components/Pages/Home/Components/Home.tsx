@@ -1,13 +1,13 @@
-import { Variants, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { HiArrowUpRight } from "react-icons/hi2";
-import picBg from "../../../Assets/png/picBg.png";
-import { HypeSQLogo } from "../../../Assets/svg";
+import picBg from "../../../../Assets/png/picBg.png";
+import { HypeSQLogo } from "../../../../Assets/svg";
+import "../styles.css";
+import Footer from "./Footer";
 import HowWeMarqet from "./HowWeMarqet";
 import PastWorq from "./PastWorq";
-import "./styles.css";
 import SpectacularClients from "./SpectacularClients";
-import Footer from "./Footer";
-import { useRef } from "react";
 
 function Section({ children }: any) {
   const ref = useRef(null);

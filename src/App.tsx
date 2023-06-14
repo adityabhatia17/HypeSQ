@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import hypGif from "./Assets/gif/SMS-HEG.gif";
 import NavBar from "./Components/App/Layout";
 import EnquiryForm from "./Components/Common/EnquiryForm/EnquiryForm";
-import Home from "./Components/Pages/Home/Home";
+import Home from "./Components/Pages/Home/Components/Home";
 import Portfolio from "./Components/Pages/Portfolio/Portfolio";
+import AboutUs from "./Components/Pages/AboutUs/AboutUs";
 
 const App = () => {
   const [showGif, setShowGif] = useState(true);
@@ -30,10 +31,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       )}
     </BrowserRouter>
-    // <Comingsoon />
   );
 };
 
