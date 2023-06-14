@@ -17,81 +17,78 @@ const HowWeMarqet = () => {
   };
 
   const handleMouseEnter = (index: number) => {
-    setHoveredIndex(index);
+    if (window.innerWidth >= 900) {
+      setHoveredIndex(index);
+    }
   };
 
   const handleMouseLeave = () => {
     setHoveredIndex(null);
   };
+  const handlePhoneClick = (index: number) => {
+    if (window.innerWidth <= 900) {
+      setShowBar(index);
+      setHoveredIndex(null);
+    }
+  };
+
   return (
     <div className="landing-wrapper-market">
       <div className="landing-left-market">
         <div className="how-we-market-list">
           {howWeMarketList.map((i, k) =>
             showBar === k ? (
-              <motion.div
+              <div
                 style={{
                   backgroundColor: `${i.color}`,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                  padding: "10px",
+                  width: window.innerWidth <= 900 ? "80vw" : "80vw",
+                  height: "20vw",
                 }}
-                initial={{ x: 0, y: 0 }}
-                animate={{ width: "100vw", height: "20vw" }}
-                transition={{ duration: 0.3 }}
+                // initial={{ x: 0, y: 0 }}
+                // animate={{
+
+                // }}
+                // transition={{ duration: 0.3 }}
+                className="market-list-open"
               >
-                <div>
-                  <div style={{ display: "flex", alignItems: "center" }}>
-                    <motion.div
-                      style={{ marginRight: "4px" }}
-                      initial={{ x: 0 }}
-                      animate={{ x: 3 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <RxCross2
-                        style={{ color: "white", cursor: "pointer" }}
-                        onClick={() => {
-                          setShowBar(null);
-                          setIsClicked(false);
-                        }}
-                      />
-                    </motion.div>
-                    <motion.p
-                      initial={{ x: 0 }}
-                      animate={{ x: 4 }}
-                      transition={{ duration: 0.3 }}
-                      style={{ color: "white" }}
-                    >
-                      {i.itemName}
-                    </motion.p>
+                <div className="market-list-open-div">
+                  <div style={{ marginRight: "4px" }}>
+                    <RxCross2
+                      style={{ color: "white", cursor: "pointer" }}
+                      onClick={() => {
+                        setShowBar(null);
+                        setIsClicked(false);
+                      }}
+                    />
                   </div>
+                  <p style={{ color: "white" }}>{i.itemName}</p>
                 </div>
+
                 <motion.div
                   transition={{ duration: 0.3 }}
                   initial={{ x: 0 }}
-                  animate={{ x: 25 }}
+                  animate={{ x: 2 }}
                 >
                   Hello
                 </motion.div>
-              </motion.div>
+              </div>
             ) : (
-              <motion.div
+              <div
                 className="market-list-item"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                // initial={{ opacity: 0, y: 50 }}
+                // animate={{ opacity: 1, y: 0 }}
+                // transition={{ duration: 0.5 }}
                 onMouseEnter={() => handleMouseEnter(k)}
                 onMouseLeave={handleMouseLeave}
               >
                 <div>
                   {hoveredIndex === k ? (
                     <>
-                      <motion.div
-                        style={{ marginRight: "4px", marginLeft: "30px" }}
-                        initial={{ x: 0 }}
-                        animate={{ x: 4 }}
-                        transition={{ duration: 0.3 }}
+                      <div
+                      // style={{ marginRight: "4px", marginLeft: "30px" }}
+                      // initial={{ x: 0 }}
+                      // animate={{ x: 4 }}
+                      // transition={{ duration: 0.3 }}
                       >
                         <AiOutlinePlus
                           style={{ color: `${i.color}`, cursor: "pointer" }}
@@ -100,17 +97,19 @@ const HowWeMarqet = () => {
                             handleClick();
                           }}
                         />
-                      </motion.div>
+                      </div>
                       <p style={{ color: `${i.color}` }}>{i.itemName}</p>
                     </>
                   ) : (
                     <>
-                      <AiOutlineArrowRight />
+                      <AiOutlineArrowRight
+                        onClick={() => handlePhoneClick(k)}
+                      />
                       <p>{i.itemName}</p>
                     </>
                   )}
                 </div>
-              </motion.div>
+              </div>
             )
           )}
         </div>
@@ -119,12 +118,13 @@ const HowWeMarqet = () => {
         className="landing-right-market"
         style={{
           opacity: isClicked ? 0 : 1,
-          right: "8%",
+          right:
+            window.innerWidth >= 1024 && window.innerWidth <= 1199
+              ? "0%"
+              : "8%",
         }}
       >
-        <motion.p style={{ color: "#1DA1F2", fontSize: "1.5rem" }}>
-          #hypeitup
-        </motion.p>
+        <span className="hypeItUp">#hypeitup</span>
         <motion.h1
           className="heading-1"
           initial={{ opacity: 0, y: 50 }}
@@ -139,7 +139,7 @@ const HowWeMarqet = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+          <div className="heading-2-market">
             <div>mar</div>
             <div style={{ marginTop: "20px" }}>
               <HypeSQBLogo className="q-class" />

@@ -128,13 +128,13 @@ const Home = () => {
       <Section>
         <HowWeMarqet />
       </Section>
-      <Section>
+      {/* <Section>
         <PastWorq />
       </Section>
       <Section>
         <SpectacularClients />
       </Section>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
