@@ -49,6 +49,7 @@ const HowWeMarqet = () => {
 
                 // }}
                 // transition={{ duration: 0.3 }}
+                key={k}
                 className="market-list-open"
               >
                 <div className="market-list-open-div">

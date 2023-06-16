@@ -94,6 +94,7 @@ const PastWorq = () => {
           ))}
         </div>
       </div>
+      <div className="landing-wrapper-worq">Hello</div>
     </div>
   );
 };

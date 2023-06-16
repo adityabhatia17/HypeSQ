@@ -4,18 +4,20 @@
   justify-content: space-between;
   padding: 1.5rem 9rem;
   min-height: 90vh;
-  margin-bottom: 1.8rem;
+  /* margin-bottom: 1.8rem; */
+  /* width: 100%; */
 }
 
 .heading-1,
 .heading-2 {
   font-size: 5.8rem;
   margin: 0px;
-  font-weight: 800;
-  /* line-height: 1.15312464em; */
+  /* font-weight: 800; */
+  line-height: 1.15312464em;
 }
 .heading-2 {
   letter-spacing: 0.03em;
+  margin-top: -20px;
 }
 .span-text {
   color: var(--textPrimary);
@@ -25,6 +27,14 @@
   color: var(--black);
   -webkit-text-stroke: 3px var(--white);
   transition: all 0.3s;
+}
+.heading-2-flex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.q-class-home {
+  padding-top: 22px;
 }
 .para {
   font-size: 1.4rem;
@@ -37,6 +47,7 @@
 }
 .q-class {
   width: 5.8rem;
+  height: 7rem;
 }
 
 .gradient {
@@ -47,13 +58,20 @@
   z-index: 0;
 }
 
-.btn-flex {
+.line-flex {
+  width: calc(100% - 250px);
   margin-top: 2rem;
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: space-between; */
   align-items: center;
-  gap: 1rem;
+  gap: 100px;
 }
+.red-line {
+  width: calc(100% - 334px);
+  background-color: #ff0042;
+  height: 2px;
+}
+
 .home-links-flex {
   display: flex;
   flex-direction: column;
@@ -310,6 +328,13 @@
   }
   .q-class {
     width: 4rem;
+  }
+  .line-flex {
+    width: 17rem;
+    gap: 100px;
+  }
+  .red-line {
+    width: 100%;
   }
 }
 /* .landing-clients-wrapper {
