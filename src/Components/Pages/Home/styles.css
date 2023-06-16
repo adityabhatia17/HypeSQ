@@ -10,7 +10,7 @@
 
 .heading-1,
 .heading-2 {
-  font-size: 5.8rem;
+  font-size: 6rem;
   margin: 0px;
   /* font-weight: 800; */
   line-height: 1.15312464em;
@@ -34,7 +34,8 @@
   gap: 5px;
 }
 .q-class-home {
-  padding-top: 22px;
+  padding-top: 12px;
+  width: 6.5rem;
 }
 .para {
   font-size: 1.4rem;
@@ -45,10 +46,6 @@
   margin-left: auto;
   align-items: left;
 }
-.q-class {
-  width: 5.8rem;
-  height: 7rem;
-}
 
 .gradient {
   position: absolute;
@@ -57,17 +54,20 @@
   object-fit: contain;
   z-index: 0;
 }
+.diagonal-arrow {
+  font-size: 1.5rem;
+}
 
 .line-flex {
-  width: calc(100% - 250px);
   margin-top: 2rem;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
-  gap: 100px;
+  /* gap: 100px; */
+  width: 95%;
 }
 .red-line {
-  width: calc(100% - 334px);
+  width: 8rem;
   background-color: #ff0042;
   height: 2px;
 }
@@ -78,6 +78,7 @@
   align-items: flex-start;
   margin-top: 2rem;
   gap: 40px;
+  width: 24rem;
 }
 .home-links-flex a {
   display: flex;
@@ -91,7 +92,7 @@
   transition: all 0.5s;
 }
 
-@media (min-width: 1200px) and (max-width: 1599px) {
+/* @media (min-width: 1200px) and (max-width: 1599px) {
   .landing-wrapper {
     padding: 1.5rem 9rem;
   }
@@ -109,8 +110,9 @@
   .para {
     font-size: 1.5rem;
   }
-  .q-class {
+  .q-class-home {
     font-size: 6rem;
+    padding-top: 22px;
   }
   .iphone {
     max-width: 300px;
@@ -134,7 +136,7 @@
   .row-2 {
     gap: 30px;
   }
-}
+} */
 @media (min-width: 1024px) and (max-width: 1199px) {
   .landing-wrapper {
     padding: 1.5rem 2rem;
@@ -146,8 +148,9 @@
   .para {
     font-size: 1.5rem;
   }
-  .q-class {
+  .q-class-home {
     font-size: 6rem;
+    padding-top: 18px;
   }
 }
 
@@ -176,13 +179,15 @@
   }
   .heading-1,
   .heading-2 {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
   .heading-clients {
     font-size: 2.2rem;
   }
-  .q-class {
-    width: 5rem;
+  .q-class-home {
+    width: 6rem;
+    /* height: 8rem; */
+    padding-top: 14px;
   }
   .para {
     font-size: 1.5rem;
@@ -219,83 +224,12 @@
   .heading-2 {
     font-size: 4rem;
   }
-  .q-class {
+  .q-class-home {
     width: 5rem;
+    padding-top: 10px;
   }
   .para {
     font-size: 0.8rem;
-  }
-
-  .landing-clients-wrapper {
-    padding: 1.5rem 3rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .landing-wrapper-market {
-    flex-wrap: wrap-reverse;
-    padding: 1.5rem 3rem;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .landing-footer-wrapper {
-    padding: 1.5rem 1.5rem;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-  }
-  .landing-footer-left {
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding-left: 0;
-  }
-
-  .para-market {
-    font-size: 1rem;
-    width: 20rem;
-  }
-
-  .landing-left-market {
-    position: static;
-    width: 100%;
-    text-align: center;
-  }
-  .big-text-footer {
-    font-size: 1.2rem;
-    justify-content: center;
-  }
-
-  .landing-right-market {
-    position: static;
-    justify-content: center;
-    margin-right: auto;
-    margin-top: 4rem;
-  }
-  .landing-footer-right {
-    justify-content: center;
-  }
-
-  .heading-clients {
-    font-size: 1.6rem;
-  }
-
-  .q-class-footer {
-    width: 1.2rem;
-  }
-
-  .btn-flex {
-    justify-content: center;
-  }
-  .how-we-market-list {
-    margin-top: 30px;
-    font-size: 1rem;
-    gap: 50px;
-  }
-  .socials-footer .socials {
-    justify-content: space-around;
   }
 }
 
@@ -306,6 +240,9 @@
     justify-content: flex-start;
     padding: 1.5rem 2rem;
     gap: 20px;
+  }
+  .home-links-flex a {
+    font-size: 1rem;
   }
   .landing-right {
     margin: 0px;
@@ -326,20 +263,21 @@
   .landing-left {
     width: 100%;
   }
-  .q-class {
-    width: 4rem;
+  .q-class-home {
+    width: 3.5rem;
+    /* height: 3.5rem; */
+    padding-top: 7.3px;
   }
   .line-flex {
     width: 17rem;
-    gap: 100px;
   }
   .red-line {
-    width: 100%;
+    width: 6rem;
+  }
+  .diagonal-arrow {
+    font-size: 1.2rem;
+  }
+  .home-links-flex {
+    width: 20rem;
   }
 }
-/* .landing-clients-wrapper {
-    height: 120vh;
-  }
-  .client-logo {
-    width: 8rem;
-  } */

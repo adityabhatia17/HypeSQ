@@ -2,33 +2,16 @@
   position: fixed;
   bottom: 0;
   right: 9%;
-  width: 300px;
-  height: 60px;
+  width: 350px;
+  max-height: 60px;
   background-color: black;
   /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); */
-  transition: transform 0.5s;
   z-index: 999;
-}
-/* .enquiryForm {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-} */
-.enquiryForm input {
-  border: none;
-  border-bottom-color: white;
-  color: white;
-  padding: 10px 20px;
-  outline: none;
-  font-size: 1rem;
-}
-.enquiryForm input:focus {
-  border-bottom-color: #5a5a5a;
-  transition: all 2s;
 }
 
 .enquiry-form.open {
-  transform: translateY(-520%);
+  max-height: 1000px;
+  transition: max-height 3s;
 }
 
 .toggle-btn {
@@ -48,31 +31,74 @@
   display: none;
   background: black;
   padding: 10px;
-  animation: revealContent 0.5s forwards;
   height: fit-content;
 }
 
-.form-content input {
+/* .form-content input {
   background-color: transparent;
   border-bottom: 2px solid white;
   border-top: none;
   border-right: none;
-}
-
-@keyframes revealContent {
-  0% {
-    opacity: 0;
-    transform: translateY(fit-content);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+} */
 
 .enquiry-form.open .form-content {
   display: block;
 }
-.ant-form-item .ant-form-item-label > label {
+
+.white-label {
   color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.white-input {
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  background-color: black;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-right: none;
+  width: 16rem;
+}
+.white-input-phone {
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  background-color: black;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-right: none;
+  width: 9.5rem;
+}
+.country-code-select {
+  color: white;
+  border: none;
+  padding: 2px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  background-color: black;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-right: none;
+  width: 6.5rem;
+}
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.submit-button {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }

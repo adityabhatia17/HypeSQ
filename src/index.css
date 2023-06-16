@@ -10,8 +10,10 @@ body {
   overflow-x: hidden;
 }
 .loader-img {
-  margin: 15rem auto;
-  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .loader-img img {
   max-width: 400px;

@@ -4,11 +4,6 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import picBg from "../../../../Assets/png/picBg.png";
 import { HypeSQLogo } from "../../../../Assets/svg";
 import "../styles.css";
-import { useState } from "react";
-import Footer from "./Footer";
-import HowWeMarqet from "./HowWeMarqet";
-import PastWorq from "./PastWorq";
-import SpectacularClients from "./SpectacularClients";
 
 function Section({ children }: any) {
   const ref = useRef(null);
@@ -30,7 +25,6 @@ function Section({ children }: any) {
 }
 
 const Home: React.FC = () => {
-  const [isRightArrow, setIsRightArrow] = useState(false);
   return (
     <div>
       <div className="landing-wrapper">
@@ -50,7 +44,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <div className="heading-2-flex">
-              <div style={{ marginTop: "-8px" }}>a</div>
+              <div style={{ marginTop: "-8px", marginRight: "-5px" }}>a</div>
               <div>
                 <HypeSQLogo className="q-class-home" />
               </div>
@@ -67,15 +61,7 @@ const Home: React.FC = () => {
             One Stop Solution For All Your
             <span className="span-text"> Digital</span> Needs
           </motion.p>
-          <motion.div
-            className="line-flex"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <div className="red-line"></div>
-            <div className="red-line"></div>
-          </motion.div>
+
           <motion.div
             className="home-links-flex"
             initial={{ opacity: 0, x: 50 }}
@@ -83,19 +69,27 @@ const Home: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <motion.div
+              className="line-flex"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <div className="red-line"></div>
+              <div className="red-line"></div>
+            </motion.div>
+            <motion.div
               initial={{ x: 0 }}
               animate={{ x: 10 }}
               transition={{
                 duration: 0.8,
                 repeat: Infinity,
-                repeatType: "loop",
-                ease: "linear",
-                repeatDelay: 2,
+                ease: "easeInOut",
+                repeatDelay: 5,
                 delay: 4,
               }}
             >
               <a href="/portfolio" style={{ textDecoration: "none" }}>
-                <motion.div
+                <motion.span
                   className="arrow-animation"
                   initial={{ rotate: 0 }}
                   animate={{ rotate: 45 }}
@@ -104,22 +98,49 @@ const Home: React.FC = () => {
                     repeat: Infinity,
                     repeatType: "loop",
                     ease: "linear",
-                    repeatDelay: 2,
+                    repeatDelay: 5,
                     delay: 4,
                   }}
                   // initial={{ rotate: isRightArrow ? -45 : 45 }}
                   // animate={{ rotate: isRightArrow ? 0 : 90 }}
                   // transition={{ duration: 0.5 }}
                 >
-                  <HiArrowUpRight style={{ fontSize: "30px" }} />
-                </motion.div>
+                  <HiArrowUpRight className="diagonal-arrow" />
+                </motion.span>
                 Watch Agency Reel
               </a>
             </motion.div>
-            <a href="/portfolio" style={{ textDecoration: "none" }}>
-              <HiArrowUpRight style={{ fontSize: "30px" }} />
-              Latest Work For Our Brands
-            </a>
+            <motion.div
+              initial={{ x: 0 }}
+              animate={{ x: 10 }}
+              transition={{
+                duration: 0.8,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "linear",
+                repeatDelay: 5,
+                delay: 6,
+              }}
+            >
+              <a href="/portfolio" style={{ textDecoration: "none" }}>
+                <motion.span
+                  className="arrow-animation"
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: 45 }}
+                  transition={{
+                    duration: 0.8,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "linear",
+                    repeatDelay: 5,
+                    delay: 6,
+                  }}
+                >
+                  <HiArrowUpRight className="diagonal-arrow" />
+                </motion.span>
+                Latest Work For Our Brands
+              </a>
+            </motion.div>
           </motion.div>
         </div>
         <div className="landing-right">
