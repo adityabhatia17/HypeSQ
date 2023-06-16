@@ -19,11 +19,19 @@
   align-items: right;
   padding: 5rem;
 }
+.socials-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
 .big-text-footer {
   font-size: 2rem;
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: center;
 }
 .q-class-footer {
   width: 3rem;
@@ -89,4 +97,209 @@
 .linkedin:hover,
 .linkedin:focus {
   color: #007bb5;
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .landing-wrapper {
+    padding: 1.5rem 9rem;
+  }
+  .landing-left {
+    width: 60%;
+  }
+  .landing-footer-left {
+    width: 60%;
+    padding-left: 0;
+  }
+  .heading-1,
+  .heading-2 {
+    font-size: 5rem;
+  }
+  .para-footer {
+    font-size: 1.5rem;
+  }
+  .q-class {
+    font-size: 6rem;
+  }
+  .iphone {
+    max-width: 300px;
+  }
+
+  .gradient {
+    max-width: 250px;
+    top: 4rem;
+  }
+
+  .heading-clients {
+    font-size: 4rem;
+  }
+  .big-text-footer {
+    font-size: 2rem;
+  }
+  .client-logo {
+    width: 12rem;
+  }
+  .row-1,
+  .row-2 {
+    gap: 30px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .landing-wrapper {
+    padding: 1.5rem 2rem;
+  }
+  .heading-1,
+  .heading-2 {
+    font-size: 5rem;
+  }
+  .para {
+    font-size: 1.5rem;
+  }
+  .q-class {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .landing-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem 3rem;
+  }
+
+  .landing-left {
+    width: 100%;
+  }
+  .landing-right {
+    justify-content: center;
+    margin-right: auto;
+    margin-top: 4rem;
+  }
+  .gradient {
+    max-width: 230px;
+    top: 3rem;
+  }
+  .iphone {
+    max-width: 280px;
+  }
+  .heading-1,
+  .heading-2 {
+    font-size: 4.5rem;
+  }
+  .heading-clients {
+    font-size: 2.2rem;
+  }
+  .q-class {
+    width: 5rem;
+  }
+  .para {
+    font-size: 1.5rem;
+  }
+  .client-logo {
+    width: 10rem;
+  }
+  .big-text-footer {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .landing-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem 3rem;
+  }
+
+  .landing-left {
+    width: 100%;
+  }
+  .landing-right {
+    justify-content: center;
+    margin-right: auto;
+    margin-top: 4rem;
+  }
+
+  .q-class {
+    width: 5rem;
+  }
+  .para {
+    font-size: 0.8rem;
+  }
+
+  .landing-footer-wrapper {
+    padding: 1.5rem 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .landing-footer-left {
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .big-text-footer {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+
+  .landing-footer-right {
+    justify-content: center;
+  }
+
+  .heading-clients {
+    font-size: 1.6rem;
+  }
+
+  .q-class-footer {
+    width: 1.2rem;
+  }
+
+  .btn-flex {
+    justify-content: center;
+  }
+  .how-we-market-list {
+    margin-top: 30px;
+    font-size: 1rem;
+    gap: 50px;
+  }
+  .socials-footer .socials {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    gap: 20px;
+  }
+  .landing-footer-right {
+    margin: 0px;
+    padding: 1rem 2rem;
+  }
+  .landing-footer-left {
+    width: 100%;
+    padding-left: 0;
+  }
+  .q-class-footer {
+    width: 1.5rem;
+    height: 2rem;
+  }
+  .footer-heading {
+    margin: auto;
+    text-align: center;
+  }
+  .para-footer {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+  .big-text-footer {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
 }

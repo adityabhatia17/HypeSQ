@@ -25,7 +25,7 @@ const SpectacularClients = () => {
             <div>Our</div>
             <div style={{ display: "flex", alignItems: "center" }}>
               <span>Spe</span>
-              <HypeSQLogo className="q-class" />
+              <HypeSQLogo className="q-class-clients" />
               <span>tacular</span>
             </div>
             <div>Clients</div>

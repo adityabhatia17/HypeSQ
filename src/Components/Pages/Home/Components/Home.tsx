@@ -31,7 +31,7 @@ function Section({ children }: any) {
 const Home = () => {
   return (
     <div>
-      <div className="landing-wrapper">
+      {/* <div className="landing-wrapper">
         <div className="landing-left">
           <motion.h1
             className="heading-1"
@@ -127,14 +127,14 @@ const Home = () => {
       </div>
       <Section>
         <HowWeMarqet />
-      </Section>
+      </Section> */}
       {/* <Section>
         <PastWorq />
-      </Section>
-      <Section>
+      </Section> */}
+      {/* <Section>
         <SpectacularClients />
-      </Section>
-      <Footer /> */}
+      </Section> */}
+      <Footer />
     </div>
   );
 };
