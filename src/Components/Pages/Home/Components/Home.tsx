@@ -4,6 +4,7 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import picBg from "../../../../Assets/png/picBg.png";
 import { HypeSQLogo } from "../../../../Assets/svg";
 import "../styles.css";
+import homeElement from "../../../../Assets/png/homeElement.png";
 
 function Section({ children }: any) {
   const ref = useRef(null);
@@ -44,11 +45,11 @@ const Home: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <div className="heading-2-flex">
-              <div style={{ marginTop: "-8px", marginRight: "-5px" }}>a</div>
+              <div style={{ marginTop: "-15px", marginRight: "-5px" }}>a</div>
               <div>
                 <HypeSQLogo className="q-class-home" />
               </div>
-              <div style={{ marginTop: "-8px" }}>tive</div>
+              <div style={{ marginTop: "-15px" }}>tive</div>
             </div>
           </motion.h1>
           <motion.p
@@ -56,7 +57,7 @@ const Home: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            style={{ fontSize: "1.4rem" }}
+            style={{ fontSize: "1.4rem", marginTop: "-4rem" }}
           >
             One Stop Solution For All Your
             <span className="span-text"> Digital</span> Needs
@@ -86,9 +87,14 @@ const Home: React.FC = () => {
                 ease: "easeInOut",
                 repeatDelay: 5,
                 delay: 4,
+                repeatType: "reverse",
               }}
             >
-              <a href="/portfolio" style={{ textDecoration: "none" }}>
+              <a
+                href="https://www.youtube.com/watch?v=B-Hq9zeAWN0"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
                 <motion.span
                   className="arrow-animation"
                   initial={{ rotate: 0 }}
@@ -96,7 +102,7 @@ const Home: React.FC = () => {
                   transition={{
                     duration: 0.8,
                     repeat: Infinity,
-                    repeatType: "loop",
+                    repeatType: "reverse",
                     ease: "linear",
                     repeatDelay: 5,
                     delay: 4,
@@ -116,7 +122,7 @@ const Home: React.FC = () => {
               transition={{
                 duration: 0.8,
                 repeat: Infinity,
-                repeatType: "loop",
+                repeatType: "reverse",
                 ease: "linear",
                 repeatDelay: 5,
                 delay: 6,
@@ -130,7 +136,7 @@ const Home: React.FC = () => {
                   transition={{
                     duration: 0.8,
                     repeat: Infinity,
-                    repeatType: "loop",
+                    repeatType: "reverse",
                     ease: "linear",
                     repeatDelay: 5,
                     delay: 6,
@@ -145,8 +151,8 @@ const Home: React.FC = () => {
         </div>
         <div className="landing-right">
           <motion.img
-            src={picBg}
-            className="iphone"
+            src={homeElement}
+            className="homeImg"
             initial={{ y: -10 }}
             animate={{ y: 10 }}
             transition={{
@@ -155,6 +161,7 @@ const Home: React.FC = () => {
               duration: 2,
               repeat: Infinity,
             }}
+            // style={{ marginLeft: "150px" }}
           />
         </div>
       </div>

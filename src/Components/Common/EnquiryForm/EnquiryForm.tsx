@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./styles.css";
 import { CountryPhoneCodes } from "./data";
 import Select from "react-select";
+import axios from "axios";
 
 const EnquiryForm = () => {
   const customStyles = {
@@ -72,6 +73,29 @@ const EnquiryForm = () => {
     e.preventDefault();
     // Perform form submission logic here
     console.log("Submitted:", name, email, phone, countryCode);
+    const formData = new FormData(e.target);
+    const emailData = {
+      from: email,
+      to: "hypesquaremedia@gmail.com",
+      subject: "Form Submission",
+      text: `Name: ${formData.get("name")}\nEmail: ${formData.get(
+        "email"
+      )}\nMessage: ${formData.get("message")}`,
+    };
+
+    axios
+      .post(`https://api.mailgun.net/v3/YOUR_DOMAIN_NAME/messages`, emailData, {
+        auth: {
+          username: "api",
+          password: "YOUR_API_KEY",
+        },
+      })
+      .then((response) => {
+        console.log("Email sent successfully!", response);
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
   };
 
   return (
