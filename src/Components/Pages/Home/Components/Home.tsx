@@ -161,7 +161,6 @@ const Home: React.FC = () => {
               duration: 2,
               repeat: Infinity,
             }}
-            // style={{ marginLeft: "150px" }}
           />
         </div>
       </div>

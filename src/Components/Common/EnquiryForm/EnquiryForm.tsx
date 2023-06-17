@@ -1,9 +1,8 @@
-import { Form, Input } from "antd";
 import { useState } from "react";
 import "./styles.css";
 import { CountryPhoneCodes } from "./data";
 import Select from "react-select";
-import axios from "axios";
+import nodemailer from "nodemailer";
 
 const EnquiryForm = () => {
   const customStyles = {
@@ -68,34 +67,34 @@ const EnquiryForm = () => {
   // const handleCountryCodeChange = (e: any) => {
   //   setCountryCode(e.target.value);
   // };
+  const sendEmail = async (name: string, email: string) => {
+    try {
+      let mailTransporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: "adityabhatia1704@gmail.com",
+          pass: "iqkepjekdtdtnvqz",
+        },
+      });
 
-  const handleSubmit = (e: any) => {
+      let details = {
+        from: "adityabhatia1704@gmail.com",
+        to: "adityalilchamp@gmail.com",
+
+        text: `Name: ${name}\nEmail: ${email}`, // Use the variables from the form
+      };
+
+      await mailTransporter.sendMail(details);
+      console.log("Email sent successfully");
+    } catch (err) {
+      console.log("Error sending email", err);
+    }
+  };
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     // Perform form submission logic here
-    console.log("Submitted:", name, email, phone, countryCode);
-    const formData = new FormData(e.target);
-    const emailData = {
-      from: email,
-      to: "hypesquaremedia@gmail.com",
-      subject: "Form Submission",
-      text: `Name: ${formData.get("name")}\nEmail: ${formData.get(
-        "email"
-      )}\nMessage: ${formData.get("message")}`,
-    };
-
-    axios
-      .post(`https://api.mailgun.net/v3/YOUR_DOMAIN_NAME/messages`, emailData, {
-        auth: {
-          username: "api",
-          password: "YOUR_API_KEY",
-        },
-      })
-      .then((response) => {
-        console.log("Email sent successfully!", response);
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
-      });
+    sendEmail(e.name, e.email);
   };
 
   return (
