@@ -1,24 +1,32 @@
-import { HypeSQLogo } from "../../../Assets/svg";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import Photography from "./Components/Photography";
+import SocialMedia from "./Components/SocialMedia";
 import "./styles/portfolio.css";
 
 const Portfolio = () => {
+  const [data, setData] = useState("shoots");
   return (
-    <div className="portfolio-wrapper">
-      <div className="banner">
-        {/* <div className="banner-left"></div> */}
-        <div className="banner-right">
-          <h1 className="heading-1-portfolio" style={{ color: "white" }}>
-            <div className="portfolio-heading-flex">
-              <div>Photographi</div>
-              <HypeSQLogo className="q-class-portfolio" />
-            </div>
-          </h1>
-          <h1 className="heading-2-portfolio" style={{ color: "white" }}>
-            Portfolio
-          </h1>
-        </div>
-      </div>
-    </div>
+    <>
+      {data === "shoots" && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Photography setData={setData} />
+        </motion.div>
+      )}
+      {data === "socialmedia" && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <SocialMedia setData={setData} />
+        </motion.div>
+      )}
+    </>
   );
 };
 export default Portfolio;

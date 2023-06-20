@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./styles.css";
 import { CountryPhoneCodes } from "./data";
 import Select from "react-select";
-import PhoneInput from "react-phone-input-2";
 
 const EnquiryForm = (props: any) => {
   const { url } = props;

@@ -1,0 +1,11 @@
+.social-banner {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../../../Assets/png/portfolioBanner2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2rem 9rem;
+}
