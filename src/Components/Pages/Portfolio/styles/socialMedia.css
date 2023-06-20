@@ -7,5 +7,25 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 2rem 9rem;
+  padding: 2rem 4.2rem;
+}
+.portfolio-sm-heading-flex {
+  display: flex;
+  align-items: center;
+}
+.socialmedia-heading-flex {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.heading-1-sm-portfolio,
+.heading-2-sm-portfolio {
+  font-size: 5rem;
+  line-height: 1.15312464em;
+}
+.heading-2-sm-portfolio {
+  margin-top: -6.6rem;
+}
+.heading-1-sm-portfolio {
+  margin-top: -1.6rem;
 }

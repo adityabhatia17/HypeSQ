@@ -10,3 +10,4 @@ export { ReactComponent as Medanta } from "./Medanta.svg";
 export { ReactComponent as SMSHEG } from "./SMSHEG.svg";
 export { ReactComponent as Cardiologix } from "./Cardiologix.svg";
 export { ReactComponent as HypesquareMediaWhiteLogo } from "./HypesquareMediaWhiteLogo.svg";
+export { ReactComponent as HypeSQPLogo } from "./QPurple.svg";

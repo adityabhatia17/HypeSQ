@@ -3,10 +3,8 @@ import { HypeSQLogo } from "../../../../Assets/svg";
 import { bannerLinks } from "../data";
 
 const Photography = ({ setData }: any) => {
-    const [hoverColor, setHoverColor] = useState(0);
-    const handleHover = () => {
-        
-    }
+  const [hoverColor, setHoverColor] = useState(0);
+  const handleHover = () => {};
 
   return (
     <div className="portfolio-wrapper">
@@ -25,12 +23,12 @@ const Photography = ({ setData }: any) => {
           <div className="banner-links">
             {bannerLinks.map((i, k) => (
               <div
-                onClick={() => setData("shoots")}
+                onClick={() => setData(i.pageName)}
                 onMouseEnter={() => setHoverColor(k)}
                 onMouseLeave={() => setHoverColor(0)}
                 key={k}
                 style={{
-                  color: `${hoverColor}`,
+                  color: `${k === hoverColor ? `${i.linkColor}` : "white"}`,
                 }}
               >
                 {i.linkName}
