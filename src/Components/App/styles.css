@@ -2,17 +2,44 @@
   position: sticky;
   top: 0;
   background-color: white;
-  padding: 1.5rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  padding: 1.5rem 5rem;
 }
 
+.portfolio-header {
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 100;
+  padding: 1.5rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  width: 90%;
+  color: white;
+}
+.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-header h1,
 .header h1 {
   margin: 0;
   font-size: 1.3rem;
   letter-spacing: 0.1em;
+}
+
+.black-clr {
+  color: black;
+}
+.white-clr {
+  color: white;
 }
 
 .links-flex {
@@ -26,10 +53,10 @@
 }
 
 .link {
-  color: black;
   font-weight: 600;
   margin: 0px;
   letter-spacing: 3px;
+  text-decoration: none;
 }
 
 .link:hover {
@@ -42,6 +69,7 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .portfolio-header,
   .header {
     padding: 1.5rem;
   }

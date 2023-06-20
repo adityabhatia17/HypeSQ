@@ -1,26 +1,94 @@
-import { HypesquareMediaLogo } from "../../Assets/svg";
+import { useEffect, useState } from "react";
+import {
+  HypesquareMediaLogo,
+  HypesquareMediaWhiteLogo,
+} from "../../Assets/svg";
 import Button from "../Common/Button/Button";
 import MobileLayout from "./MobileLayout";
 import "./styles.css";
 
 function NavBar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const isPortfolio = window.location.pathname.split("/")[1] === "portfolio";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="header">
+    <div
+      className={`${
+        !isPortfolio
+          ? "header"
+          : `${isScrolled ? "portfolio-header scrolled" : "portfolio-header"}`
+      }`}
+    >
       <a href="/">
-        <HypesquareMediaLogo width={150} />
+        {!isPortfolio ? (
+          <HypesquareMediaLogo width={150} />
+        ) : isScrolled ? (
+          <HypesquareMediaLogo width={150} />
+        ) : (
+          <HypesquareMediaWhiteLogo width={150} />
+        )}
       </a>
       <div className="links-flex">
         <a href="/">
-          <p className="link">HOME</p>
+          <p
+            className={`${
+              !isPortfolio
+                ? "link"
+                : `link ${isScrolled ? "black-clr" : "white-clr"}`
+            }`}
+          >
+            HOME
+          </p>
         </a>
         <a href="/portfolio">
-          <p className="link">PORTFOLIO</p>
+          <p
+            className={`${
+              !isPortfolio
+                ? "link"
+                : `link ${isScrolled ? "black-clr" : "white-clr"}`
+            }`}
+          >
+            PORTFOLIO
+          </p>
         </a>
         <a href="/about-us">
-          <p className="link">ABOUT US</p>
+          <p
+            className={`${
+              !isPortfolio
+                ? "link"
+                : `link ${isScrolled ? "black-clr" : "white-clr"}`
+            }`}
+          >
+            ABOUT US
+          </p>
         </a>
         <a href="/contact-us">
-          <p className="link">CONTACT US</p>
+          <p
+            className={`${
+              !isPortfolio
+                ? "link"
+                : `link ${isScrolled ? "black-clr" : "white-clr"}`
+            }`}
+          >
+            CONTACT US
+          </p>
         </a>
         <a href="/">
           <Button

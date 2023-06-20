@@ -6,6 +6,7 @@ import { HypeSQLogo } from "../../../../Assets/svg";
 import { ourPastWorqData } from "../data";
 import "../styles.css";
 import "./styles/pastwork.css";
+import sachinPic from "../../../../Assets/gif/sachinClient.gif";
 
 const PastWorq = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number>(0);
@@ -45,7 +46,7 @@ const PastWorq = () => {
             <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
               <div>wor</div>
               <div style={{ marginTop: "20px" }}>
-                <HypeSQLogo className="q-class" />
+                <HypeSQLogo className="q-class-home" />
               </div>
             </div>
           </motion.h1>
@@ -94,7 +95,9 @@ const PastWorq = () => {
           ))}
         </div>
       </div>
-      <div className="landing-wrapper-worq">Hello</div>
+      <div className="landing-wrapper-worq">
+        <img src={sachinPic} />
+      </div>
     </div>
   );
 };

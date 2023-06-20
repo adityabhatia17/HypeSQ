@@ -96,9 +96,9 @@
   color: black;
   transition: all 0.5s;
 }
-.homeImg {
+/* .homeImg {
   margin-left: -150px;
-}
+} */
 
 /* @media (min-width: 1200px) and (max-width: 1599px) {
   .landing-wrapper {

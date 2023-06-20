@@ -2,9 +2,10 @@ import { useState } from "react";
 import "./styles.css";
 import { CountryPhoneCodes } from "./data";
 import Select from "react-select";
-import nodemailer from "nodemailer";
+import PhoneInput from "react-phone-input-2";
 
-const EnquiryForm = () => {
+const EnquiryForm = (props: any) => {
+  const { url } = props;
   const customStyles = {
     control: (provided: any, state: any) => ({
       ...provided,
@@ -67,34 +68,34 @@ const EnquiryForm = () => {
   // const handleCountryCodeChange = (e: any) => {
   //   setCountryCode(e.target.value);
   // };
-  const sendEmail = async (name: string, email: string) => {
-    try {
-      let mailTransporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: "adityabhatia1704@gmail.com",
-          pass: "iqkepjekdtdtnvqz",
-        },
-      });
+  // const sendEmail = async (name: string, email: string) => {
+  //   try {
+  //     let mailTransporter = nodemailer.createTransport({
+  //       service: "gmail",
+  //       auth: {
+  //         user: "adityabhatia1704@gmail.com",
+  //         pass: "iqkepjekdtdtnvqz",
+  //       },
+  //     });
 
-      let details = {
-        from: "adityabhatia1704@gmail.com",
-        to: "adityalilchamp@gmail.com",
+  //     let details = {
+  //       from: "adityabhatia1704@gmail.com",
+  //       to: "adityalilchamp@gmail.com",
 
-        text: `Name: ${name}\nEmail: ${email}`, // Use the variables from the form
-      };
+  //       text: `Name: ${name}\nEmail: ${email}`, // Use the variables from the form
+  //     };
 
-      await mailTransporter.sendMail(details);
-      console.log("Email sent successfully");
-    } catch (err) {
-      console.log("Error sending email", err);
-    }
-  };
+  //     await mailTransporter.sendMail(details);
+  //     console.log("Email sent successfully");
+  //   } catch (err) {
+  //     console.log("Error sending email", err);
+  //   }
+  // };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     // Perform form submission logic here
-    sendEmail(e.name, e.email);
+    // sendEmail(e.name, e.email);
   };
 
   return (

@@ -5,6 +5,7 @@ import picBg from "../../../../Assets/png/picBg.png";
 import { HypeSQLogo } from "../../../../Assets/svg";
 import "../styles.css";
 import homeElement from "../../../../Assets/png/homeElement.png";
+import PastWorq from "./PastWorq";
 
 function Section({ children }: any) {
   const ref = useRef(null);
