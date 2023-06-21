@@ -12,6 +12,7 @@
 .portfolio-sm-heading-flex {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .socialmedia-heading-flex {
   display: flex;

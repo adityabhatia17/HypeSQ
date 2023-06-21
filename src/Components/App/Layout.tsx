@@ -9,6 +9,7 @@ import "./styles.css";
 
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  // const [isWhiteBg, setIsWhiteBg] = useState(false);
 
   const isPortfolio = window.location.pathname.split("/")[1] === "portfolio";
 

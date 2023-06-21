@@ -14,14 +14,14 @@ export default function MobileLayout() {
           <a href="/">
             <p className="link">Home</p>
           </a>
-          <a href="/compare">
-            <p className="link">Compare</p>
+          <a href="/portfolio">
+            <p className="link">Portfolio</p>
           </a>
-          <a href="/watchlist">
-            <p className="link">Watchlist</p>
+          <a href="/about-us">
+            <p className="link">About Us</p>
           </a>
-          <a href="/dashboard">
-            <p className="link">Dashboard</p>
+          <a href="/contact-us">
+            <p className="link">Contact Us</p>
           </a>
         </div>
       </Drawer>

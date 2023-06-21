@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HypeSQLogo } from "../../../../Assets/svg";
 import { bannerLinks } from "../data";
+import { motion } from "framer-motion";
 
 const Photography = ({ setData }: any) => {
   const [hoverColor, setHoverColor] = useState(0);
@@ -9,18 +10,34 @@ const Photography = ({ setData }: any) => {
   return (
     <div className="portfolio-wrapper">
       <div className="banner">
-        {/* <div className="banner-left"></div> */}
         <div className="banner-right">
-          <h1 className="heading-1-portfolio" style={{ color: "white" }}>
+          <motion.h1
+            className="heading-1-portfolio"
+            style={{ color: "white" }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="portfolio-heading-flex">
               <div>Photographi</div>
               <HypeSQLogo className="q-class-portfolio" />
             </div>
-          </h1>
-          <h1 className="heading-2-portfolio" style={{ color: "white" }}>
+          </motion.h1>
+          <motion.h1
+            className="heading-2-portfolio"
+            style={{ color: "white" }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             Portfolio
-          </h1>
-          <div className="banner-links">
+          </motion.h1>
+          <motion.div
+            className="banner-links"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             {bannerLinks.map((i, k) => (
               <div
                 onClick={() => setData(i.pageName)}
@@ -34,7 +51,7 @@ const Photography = ({ setData }: any) => {
                 {i.linkName}
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

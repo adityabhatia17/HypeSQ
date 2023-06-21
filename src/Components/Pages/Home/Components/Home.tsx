@@ -1,30 +1,8 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { HiArrowUpRight } from "react-icons/hi2";
-import picBg from "../../../../Assets/png/picBg.png";
+import homeElement from "../../../../Assets/png/homeElement.png";
 import { HypeSQLogo } from "../../../../Assets/svg";
 import "../styles.css";
-import homeElement from "../../../../Assets/png/homeElement.png";
-import PastWorq from "./PastWorq";
-
-function Section({ children }: any) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <section ref={ref}>
-      <span
-        style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-        }}
-      >
-        {children}
-      </span>
-    </section>
-  );
-}
 
 const Home: React.FC = () => {
   return (
