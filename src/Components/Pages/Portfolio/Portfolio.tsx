@@ -10,24 +10,30 @@ const Portfolio = () => {
   const [data, setData] = useState("shoots");
   return (
     <>
+      {/* <AnimatePresence> */}
       {data === "shoots" && (
         <motion.div
-          initial={{ opacity: 0.2 }}
+          initial={{ opacity: 0.8 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1, ease: "easeIn" }}
+          exit={{ opacity: 0.2 }}
         >
           <Photography setData={setData} />
         </motion.div>
       )}
+      {/* </AnimatePresence>
+      <AnimatePresence> */}
       {data === "socialmedia" && (
         <motion.div
-          initial={{ opacity: 0.2 }}
+          initial={{ opacity: 0.8 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
+          exit={{ opacity: 0.2 }}
         >
           <SocialMedia setData={setData} />
         </motion.div>
       )}
+      {/* </AnimatePresence> */}
       {data === "website" && (
         <motion.div
           initial={{ opacity: 0.2 }}

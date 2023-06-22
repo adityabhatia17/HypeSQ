@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 const Photography = ({ setData }: any) => {
   const [hoverColor, setHoverColor] = useState(0);
-  const handleHover = () => {};
 
   return (
     <div className="portfolio-wrapper">
