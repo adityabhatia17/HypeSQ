@@ -13,3 +13,24 @@
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 480px) {
+  .ads-banner {
+    padding: 0rem 1.2rem;
+    background-size: 125vw;
+    min-height: 40vh;
+  }
+
+  .banner-right {
+    margin: 0px;
+    z-index: 20;
+  }
+  .heading-1-portfolio,
+  .heading-2-portfolio {
+    font-size: 2.5rem;
+  }
+  .q-class-portfolio {
+    width: 2.4rem;
+    padding-top: 6px;
+  }
+}

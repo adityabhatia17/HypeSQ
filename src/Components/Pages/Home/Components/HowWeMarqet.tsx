@@ -38,17 +38,17 @@ const HowWeMarqet = () => {
         <div className="how-we-market-list">
           {howWeMarketList.map((i, k) =>
             showBar === k ? (
-              <div
+              <motion.div
                 style={{
                   backgroundColor: `${i.color}`,
-                  width: window.innerWidth <= 900 ? "80vw" : "80vw",
-                  height: "20vw",
+                  width: "94.8vw",
+                  // height: "20vw",
                 }}
-                // initial={{ x: 0, y: 0 }}
-                // animate={{
-
-                // }}
-                // transition={{ duration: 0.3 }}
+                initial={{ height: 0 }}
+                animate={{
+                  height: window.innerHeight,
+                }}
+                transition={{ duration: 0.3 }}
                 key={k}
                 className="market-list-open"
               >
@@ -72,7 +72,7 @@ const HowWeMarqet = () => {
                 >
                   Hello
                 </motion.div>
-              </div>
+              </motion.div>
             ) : (
               <div
                 className="market-list-item"
@@ -143,7 +143,7 @@ const HowWeMarqet = () => {
           <div className="heading-2-market">
             <div>mar</div>
             <div style={{ marginTop: "20px" }}>
-              <HypeSQBLogo className="q-class" />
+              <HypeSQBLogo className="q-class-market" />
             </div>
             <div>et</div>
           </div>

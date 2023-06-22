@@ -1,10 +1,30 @@
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import Drawer from "@mui/material/Drawer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./styles.css";
 
 export default function MobileLayout() {
   const [flag, setFlag] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isWhiteBg, setIsWhiteBg] = useState(false);
+
+  const isPortfolio = window.location.pathname.split("/")[1] === "portfolio";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="drawer-wrapper">

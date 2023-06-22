@@ -3,6 +3,7 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import homeElement from "../../../../Assets/png/homeElement.png";
 import { HypeSQLogo } from "../../../../Assets/svg";
 import "../styles.css";
+import HowWeMarqet from "./HowWeMarqet";
 
 const Home: React.FC = () => {
   return (
@@ -143,9 +144,9 @@ const Home: React.FC = () => {
           />
         </div>
       </div>
-      {/* <Section>
-        <HowWeMarqet />
-      </Section> */}
+      {/* <Section> */}
+      <HowWeMarqet />
+      {/* </Section> */}
       {/* <Section>
         <PastWorq />
       </Section> */}

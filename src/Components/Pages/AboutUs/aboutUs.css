@@ -1,0 +1,10 @@
+.para-about-us {
+  font-size: 1rem;
+  width: 29rem;
+}
+.founders-wrapper {
+  background-image: url("../../../Assets/png/foundersBanner.png");
+  width: 100%;
+  min-height: 90vh;
+  background-size: cover;
+}
