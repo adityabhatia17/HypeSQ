@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.5rem 9rem;
+  /* padding: 1.5rem 9rem; */
   min-height: 90vh;
   margin-bottom: 1.8rem;
 }
@@ -29,7 +29,7 @@
 .heading-2-market {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 .market-list-open-div {
   display: flex;
@@ -51,6 +51,10 @@
   width: 30rem;
   line-height: 1.15312464em;
   font-size: 1.4rem;
+}
+.q-class-market {
+  width: 5.7rem;
+  padding-top: 15px;
 }
 /* 
 @media (min-width: 1200px) and (max-width: 1599px) {
@@ -167,19 +171,18 @@
 @media (max-width: 480px) {
   .landing-wrapper-market {
     flex-direction: column-reverse;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
     gap: 20px;
   }
   .how-we-market-list {
     font-size: 0.8rem;
-    gap: 20px;
+    gap: 8px;
     letter-spacing: 0.1em;
     align-items: flex-start;
     margin: auto;
     width: fit-content;
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
   }
   .landing-right-market {
     margin: 0px;
@@ -189,12 +192,16 @@
   .heading-2-market {
     font-size: 3rem;
   }
+  .heading-1 {
+    margin-top: 3px;
+  }
   .landing-left-market {
     position: static;
-    margin-right: auto;
+    /* margin-right: auto; */
   }
   .q-class-market {
     width: 3rem;
+    padding-top: 6px;
   }
   .para-market {
     font-size: 1rem;

@@ -102,12 +102,12 @@ const HowWeMarqet = () => {
                       <p style={{ color: `${i.color}` }}>{i.itemName}</p>
                     </>
                   ) : (
-                    <>
+                    <motion.div initial={{}}>
                       <AiOutlineArrowRight
                         onClick={() => handlePhoneClick(k)}
                       />
                       <p>{i.itemName}</p>
-                    </>
+                    </motion.div>
                   )}
                 </div>
               </div>
@@ -142,9 +142,7 @@ const HowWeMarqet = () => {
         >
           <div className="heading-2-market">
             <div>mar</div>
-            <div style={{ marginTop: "20px" }}>
-              <HypeSQBLogo className="q-class-market" />
-            </div>
+            <HypeSQBLogo className="q-class-market" />
             <div>et</div>
           </div>
         </motion.h1>
