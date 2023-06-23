@@ -11,10 +11,8 @@
   font-size: 1.5rem;
 }
 .market-list-open {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
+  padding: 2rem 9rem;
+  width: 100vw;
 }
 .landing-right-market {
   display: flex;
@@ -23,6 +21,10 @@
   align-items: left;
   position: absolute;
 }
+.item-desc {
+  width: 800px;
+}
+
 .landing-left-market {
   position: absolute;
 }
@@ -31,10 +33,7 @@
   align-items: center;
   gap: 4px;
 }
-.market-list-open-div {
-  display: flex;
-  align-items: center;
-}
+
 .how-we-market-list {
   display: flex;
   flex-direction: column;
@@ -42,11 +41,12 @@
   gap: 54px;
   letter-spacing: 0.1em;
 }
-.how-we-market-list div {
+.normal-list {
   display: flex;
   align-items: center;
-  gap: 4px;
+  padding-left: 9rem;
 }
+
 .para-market {
   width: 30rem;
   line-height: 1.15312464em;
@@ -96,20 +96,16 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .landing-wrapper-market {
     flex-direction: column-reverse;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1.5rem 3rem;
+    justify-content: flex-end;
+    gap: 20px;
   }
 
   .landing-left-market {
-    width: 100%;
     position: static;
   }
   .landing-right-market {
-    justify-content: center;
-    margin-right: auto;
-    margin-top: 4rem;
     position: static;
+    padding: 1.5rem 2rem;
     margin-left: 0;
   }
 
@@ -124,47 +120,71 @@
     font-size: 1.5rem;
     width: 35rem;
   }
+  .normal-list {
+    padding: 0rem 2rem;
+  }
+  .market-list-open {
+    padding: 0rem 2rem;
+    box-sizing: border-box;
+  }
+  .item-desc {
+    width: 600px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
   .landing-wrapper-market {
     flex-direction: column-reverse;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1.5rem 3rem;
+    justify-content: flex-end;
+    gap: 20px;
   }
 
   .landing-left-market {
-    width: 100%;
+    /* width: 100%; */
     position: static;
   }
   .landing-right-market {
-    justify-content: center;
-    margin-top: 4rem;
     position: static;
-    align-items: flex-start;
+    padding: 1.5rem 2rem;
     margin-left: 0;
   }
   .heading-1,
   .heading-2-market {
     font-size: 4rem;
   }
-  .q-class {
-    width: 5rem;
+  .q-class-market {
+    width: 4.3rem;
+    padding-top: 13px;
   }
 
   .para-market {
     font-size: 1.2rem;
-    width: 28rem;
+    width: 24rem;
+    margin-top: -4rem;
   }
 
   .btn-flex {
     justify-content: center;
   }
   .how-we-market-list {
-    margin-top: 30px;
-    font-size: 1rem;
-    gap: 50px;
+    font-size: 0.8rem;
+    gap: 8px;
+    letter-spacing: 0.1em;
+    align-items: flex-start;
+    width: fit-content;
+  }
+  .normal-list {
+    padding: 0rem 3rem;
+  }
+  .item-desc {
+    width: 450px;
+  }
+  .market-list-open {
+    /* padding: 0rem 2rem; */
+    padding-left: 2rem;
+    /* width: 63.8vw;
+     */
+    box-sizing: border-box;
   }
 }
 
@@ -172,7 +192,6 @@
   .landing-wrapper-market {
     flex-direction: column-reverse;
     justify-content: flex-end;
-    padding: 1rem 2rem;
     gap: 20px;
   }
   .how-we-market-list {
@@ -185,8 +204,9 @@
     /* margin-left: 1.5rem; */
   }
   .landing-right-market {
-    margin: 0px;
     position: static;
+    padding: 1.5rem 2rem;
+    margin-left: 0;
   }
   .heading-1,
   .heading-2-market {
@@ -205,7 +225,17 @@
   }
   .para-market {
     font-size: 1rem;
-    width: 22rem;
+    width: 18rem;
     margin-top: -4rem;
+  }
+  .normal-list {
+    padding: 0rem 2rem;
+  }
+  .market-list-open {
+    padding: 0rem 2rem;
+    width: 86vw;
+  }
+  .item-desc {
+    width: 350px;
   }
 }

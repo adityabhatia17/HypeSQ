@@ -4,6 +4,7 @@ import homeElement from "../../../../Assets/png/homeElement.png";
 import { HypeSQLogo } from "../../../../Assets/svg";
 import "../styles.css";
 import HowWeMarqet from "./HowWeMarqet";
+import PastWorq from "./PastWorq";
 
 const Home: React.FC = () => {
   return (
@@ -147,9 +148,9 @@ const Home: React.FC = () => {
       {/* <Section> */}
       <HowWeMarqet />
       {/* </Section> */}
-      {/* <Section>
-        <PastWorq />
-      </Section> */}
+      {/* <Section> */}
+      <PastWorq />
+      {/* </Section> */}
       {/* <Section>
         <SpectacularClients />
       </Section>

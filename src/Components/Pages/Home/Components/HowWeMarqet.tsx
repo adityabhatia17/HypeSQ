@@ -36,83 +36,83 @@ const HowWeMarqet = () => {
     <div className="landing-wrapper-market">
       <div className="landing-left-market">
         <div className="how-we-market-list">
-          {howWeMarketList.map((i, k) =>
-            showBar === k ? (
-              <motion.div
-                style={{
-                  backgroundColor: `${i.color}`,
-                  width: "94.8vw",
-                  // height: "20vw",
-                }}
-                initial={{ height: 0 }}
-                animate={{
-                  height: window.innerHeight,
-                }}
-                transition={{ duration: 0.3 }}
-                key={k}
-                className="market-list-open"
-              >
-                <div className="market-list-open-div">
-                  <div style={{ marginRight: "4px" }}>
-                    <RxCross2
-                      style={{ color: "white", cursor: "pointer" }}
-                      onClick={() => {
-                        setShowBar(null);
-                        setIsClicked(false);
-                      }}
-                    />
-                  </div>
-                  <p style={{ color: "white" }}>{i.itemName}</p>
-                </div>
-
+          {howWeMarketList.map((i, k) => (
+            <div
+              onMouseEnter={() => handleMouseEnter(k)}
+              style={{ color: `${hoveredIndex === k ? i.color : "black"}` }}
+              onMouseLeave={() => handleMouseLeave()}
+            >
+              {showBar === k ? (
                 <motion.div
+                  style={{
+                    backgroundColor: `${i.color}`,
+                  }}
+                  initial={{ height: 0 }}
+                  animate={{
+                    height: 500,
+                  }}
                   transition={{ duration: 0.3 }}
-                  initial={{ x: 0 }}
-                  animate={{ x: 2 }}
+                  key={k}
+                  className="market-list-open"
                 >
-                  Hello
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <div style={{ marginRight: "4px" }}>
+                      <RxCross2
+                        style={{ color: "white", cursor: "pointer" }}
+                        onClick={() => {
+                          setShowBar(null);
+                          setIsClicked(false);
+                        }}
+                      />
+                    </div>
+                    <p style={{ color: "white" }}>{i.itemName}</p>
+                  </div>
+
+                  <motion.div
+                    transition={{ duration: 0.3 }}
+                    initial={{ x: 0 }}
+                    animate={{ x: 2 }}
+                    style={{ color: "white" }}
+                    className="item-desc"
+                  >
+                    {i.desc}
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            ) : (
-              <div
-                className="market-list-item"
-                // initial={{ opacity: 0, y: 50 }}
-                // animate={{ opacity: 1, y: 0 }}
-                // transition={{ duration: 0.5 }}
-                onMouseEnter={() => handleMouseEnter(k)}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div>
+              ) : (
+                <motion.div
+                  className="normal-list"
+                  // initial={{ x: 0 }}
+                  // animate={{ x: 10 }}
+                  // transition={{
+                  //   duration: 0.5,
+                  //   repeat: Infinity,
+                  //   repeatType: "reverse",
+                  //   delay: k * 8,
+                  //   repeatDelay: k === 0 ? 8 : k * 8,
+                  // }}
+                >
                   {hoveredIndex === k ? (
                     <>
-                      <div
-                      // style={{ marginRight: "4px", marginLeft: "30px" }}
-                      // initial={{ x: 0 }}
-                      // animate={{ x: 4 }}
-                      // transition={{ duration: 0.3 }}
-                      >
-                        <AiOutlinePlus
-                          style={{ color: `${i.color}`, cursor: "pointer" }}
-                          onClick={() => {
-                            setShowBar(k);
-                            handleClick();
-                          }}
-                        />
-                      </div>
-                      <p style={{ color: `${i.color}` }}>{i.itemName}</p>
+                      <AiOutlinePlus
+                        style={{
+                          color: `${i.color}`,
+                          cursor: "pointer",
+                          marginLeft: "15px",
+                        }}
+                        onClick={() => {
+                          setShowBar(k);
+                          handleClick();
+                        }}
+                      />
                     </>
                   ) : (
-                    <motion.div initial={{}}>
-                      <AiOutlineArrowRight
-                        onClick={() => handlePhoneClick(k)}
-                      />
-                      <p>{i.itemName}</p>
-                    </motion.div>
+                    <AiOutlineArrowRight onClick={() => handlePhoneClick(k)} />
                   )}
-                </div>
-              </div>
-            )
-          )}
+                  <p>{i.itemName}</p>
+                </motion.div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
       <div
@@ -149,7 +149,16 @@ const HowWeMarqet = () => {
         <motion.div className="para-market">
           From Creatively engaging content and shoots to chart-breaking ad
           campaigns, we have delivered value that is more than just numbers. We
-          create a brand family. Click on the services below to know more!
+          create a brand family.{" "}
+          {window.innerWidth >= 1024 ? (
+            <span style={{ color: "#1DA1F2" }}>
+              Click on the services to know more!
+            </span>
+          ) : (
+            <span style={{ color: "#1DA1F2" }}>
+              Click on the services below to know more!
+            </span>
+          )}
         </motion.div>
       </div>
     </div>

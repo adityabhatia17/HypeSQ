@@ -2,15 +2,19 @@
 .landing-wrapper-worq {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   min-height: 90vh;
   margin-bottom: 1.8rem;
-  width: 100%;
+  justify-content: space-between;
 }
 .landing-left-worq {
-  padding: 1.5rem 10rem;
-  width: 100%;
+  padding: 1rem 1rem 1rem 9rem;
+  /* width: 100%; */
 }
 .landing-right-worq {
-  padding: 0 10rem 0 0;
+  padding: 0 9rem 0 0;
+}
+.heading-1-worq {
+  font-size: 6rem;
+  margin-bottom: -4rem;
+  margin-top: 0;
 }

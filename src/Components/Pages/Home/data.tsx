@@ -2,13 +2,33 @@ export const howWeMarketList = [
   {
     itemName: "SOCIAL MEDIA MARKETING",
     color: "#FF0042",
-    clickContent: "Sign Up for the Biggest annual event of the industry.",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
-  { itemName: "WEBSITE CREATION", color: "#1DA1F2" },
-  { itemName: "PERFORMANCE ADS", color: "#FCC023" },
-  { itemName: "PACKAGING DESIGN", color: "#FF6D1A" },
-  { itemName: "CREATIVE SHOOTS", color: "#6BDFA1" },
-  { itemName: "BRAND CONSULTATION", color: "#9F65F1" },
+  {
+    itemName: "WEBSITE CREATION",
+    color: "#1DA1F2",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+  },
+  {
+    itemName: "PERFORMANCE ADS",
+    color: "#FCC023",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+  },
+  {
+    itemName: "PACKAGING DESIGN",
+    color: "#FF6D1A",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+  },
+  {
+    itemName: "CREATIVE SHOOTS",
+    color: "#6BDFA1",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+  },
+  {
+    itemName: "BRAND CONSULTATION",
+    color: "#9F65F1",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+  },
 ];
 export const ourPastWorqData = [
   {

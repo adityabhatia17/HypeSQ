@@ -7,6 +7,8 @@ import { ourPastWorqData } from "../data";
 import "../styles.css";
 import "./styles/pastwork.css";
 import sachinPic from "../../../../Assets/gif/sachinClient.gif";
+import smsHEG from "../../../../Assets/gif/smsHEG.gif";
+import smsHEG2 from "../../../../Assets/gif/smsHEG3rd.gif";
 
 const PastWorq = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number>(0);
@@ -28,30 +30,36 @@ const PastWorq = () => {
           }`,
         }}
       >
-        <div>
-          <motion.h1
-            className="heading-1"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Our Past
-          </motion.h1>
-          <motion.h1
-            className="heading-2"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-              <div>wor</div>
-              <div style={{ marginTop: "20px" }}>
-                <HypeSQLogo className="q-class-home" />
-              </div>
+        <motion.h1
+          className="heading-1-worq"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Our Latest
+        </motion.h1>
+        <motion.h1
+          className="heading-2"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <div className="heading-2-flex">
+            <div style={{ marginTop: "-15px", marginRight: "-5px" }}>Work</div>
+            <div>
+              <HypeSQLogo className="q-class-home" />
             </div>
-          </motion.h1>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+          </div>
+        </motion.h1>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+            marginTop: "-60px",
+          }}
+        >
           {ourPastWorqData.map((i, k) => (
             <div
               style={{
@@ -74,6 +82,7 @@ const PastWorq = () => {
                   display: "flex",
                   flexDirection: "column",
                   color: `${hoveredIdx === k ? "white" : "black"}`,
+                  width: "700px",
                 }}
               >
                 <p
@@ -95,8 +104,13 @@ const PastWorq = () => {
           ))}
         </div>
       </div>
-      <div className="landing-wrapper-worq">
-        <img src={sachinPic} />
+      <div className="landing-right-worq">
+        <img
+          src={
+            hoveredIdx === 0 ? smsHEG : hoveredIdx === 1 ? sachinPic : smsHEG2
+          }
+          alt={hoveredIdx === 0 ? "SMS-HEG" : "Sachin"}
+        />
       </div>
     </div>
   );
