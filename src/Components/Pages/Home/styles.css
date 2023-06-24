@@ -10,7 +10,7 @@
 
 .heading-1,
 .heading-2 {
-  font-size: 6rem;
+  font-size: 5rem;
   margin: 0px;
   /* font-weight: 800; */
   line-height: 1.15312464em;
@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   margin-left: auto;
-  align-items: left;
+  /* align-items: left; */
   width: 569px;
 }
 

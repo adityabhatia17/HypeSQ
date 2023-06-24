@@ -12,3 +12,4 @@ export { ReactComponent as Cardiologix } from "./Cardiologix.svg";
 export { ReactComponent as HypesquareMediaWhiteLogo } from "./HypesquareMediaWhiteLogo.svg";
 export { ReactComponent as HypeSQPLogo } from "./QPurple.svg";
 export { ReactComponent as HypeSQYLogo } from "./QYellow.svg";
+export { ReactComponent as HypeSQBlLogo } from "./QBlack.svg";

@@ -5,6 +5,7 @@
   /* padding: 1.5rem 9rem; */
   min-height: 90vh;
   margin-bottom: 1.8rem;
+  padding: 2rem 9rem 2rem 0rem;
 }
 .hypeItUp {
   color: #1da1f2;
@@ -19,15 +20,34 @@
   flex-direction: column;
   margin-left: auto;
   align-items: left;
-  position: absolute;
+  /* position: absolute; */
+  margin-top: 25px;
 }
 .item-desc {
   width: 800px;
 }
 
 .landing-left-market {
-  position: absolute;
+  /* position: absolute; */
+  /* top: 110%; */
+  /* display: block; */
 }
+.heading-1-hwm,
+.heading-2-hwm {
+  font-size: 5rem;
+  margin: 0px;
+  /* font-weight: 800; */
+  line-height: 1.15312464em;
+}
+.heading-2-hwm {
+  letter-spacing: 0.03em;
+  margin-top: -20px;
+}
+.heading-1-hwm {
+  margin-top: 1rem;
+  margin-bottom: -4rem;
+}
+
 .heading-2-market {
   display: flex;
   align-items: center;
@@ -38,24 +58,36 @@
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
-  gap: 54px;
+  gap: 28px;
   letter-spacing: 0.1em;
 }
 .normal-list {
   display: flex;
   align-items: center;
   padding-left: 9rem;
+  gap: 4px;
 }
 
 .para-market {
-  width: 30rem;
+  width: 23rem;
   line-height: 1.15312464em;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  word-break: keep-all;
+  margin-top: -3rem;
 }
 .q-class-market {
-  width: 5.7rem;
-  padding-top: 15px;
+  width: 5rem;
+  padding-top: 11px;
 }
+.our-services {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.2rem;
+  color: #1da1f2;
+  margin-top: 40px;
+}
+
 /* 
 @media (min-width: 1200px) and (max-width: 1599px) {
   .landing-wrapper-market {
@@ -98,6 +130,7 @@
     flex-direction: column-reverse;
     justify-content: flex-end;
     gap: 20px;
+    padding: 0rem 2rem 0rem 0rem;
   }
 
   .landing-left-market {
@@ -109,19 +142,20 @@
     margin-left: 0;
   }
 
-  .heading-1,
-  .heading-2-market {
-    font-size: 4.5rem;
+  .heading-1-hwm,
+  .heading-2-hwm {
+    font-size: 6rem;
   }
-  .q-class {
-    width: 5rem;
+  .q-class-market {
+    width: 5.8rem;
+    padding-top: 13px;
   }
   .para-market {
     font-size: 1.5rem;
-    width: 35rem;
+    width: 28rem;
   }
   .normal-list {
-    padding: 0rem 2rem;
+    padding: 0rem 0rem 0rem 2rem;
   }
   .market-list-open {
     padding: 0rem 2rem;
@@ -130,6 +164,12 @@
   .item-desc {
     width: 600px;
   }
+  .our-services {
+    font-size: 1.5rem;
+  }
+  .how-we-market-list {
+    margin-top: -25px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -137,6 +177,7 @@
     flex-direction: column-reverse;
     justify-content: flex-end;
     gap: 20px;
+    padding: 0rem 2rem 0rem 0rem;
   }
 
   .landing-left-market {
@@ -148,33 +189,34 @@
     padding: 1.5rem 2rem;
     margin-left: 0;
   }
-  .heading-1,
-  .heading-2-market {
-    font-size: 4rem;
+  .heading-1-hwm,
+  .heading-2-hwm {
+    font-size: 5.6rem;
   }
   .q-class-market {
-    width: 4.3rem;
+    width: 5.3rem;
     padding-top: 13px;
   }
 
   .para-market {
     font-size: 1.2rem;
     width: 24rem;
-    margin-top: -4rem;
+    margin-top: -4.7rem;
   }
 
   .btn-flex {
     justify-content: center;
   }
   .how-we-market-list {
-    font-size: 0.8rem;
+    font-size: 1rem;
     gap: 8px;
     letter-spacing: 0.1em;
     align-items: flex-start;
     width: fit-content;
+    margin-top: -30px;
   }
   .normal-list {
-    padding: 0rem 3rem;
+    padding: 0rem 0rem 0rem 2rem;
   }
   .item-desc {
     width: 450px;
@@ -186,6 +228,9 @@
      */
     box-sizing: border-box;
   }
+  .our-services {
+    margin-top: 28px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -193,26 +238,26 @@
     flex-direction: column-reverse;
     justify-content: flex-end;
     gap: 20px;
+    padding: 0rem 2rem 0rem 0rem;
   }
   .how-we-market-list {
     font-size: 0.8rem;
     gap: 8px;
     letter-spacing: 0.1em;
     align-items: flex-start;
-    margin: auto;
+    margin-top: -11px;
     width: fit-content;
-    /* margin-left: 1.5rem; */
   }
   .landing-right-market {
     position: static;
     padding: 1.5rem 2rem;
     margin-left: 0;
   }
-  .heading-1,
-  .heading-2-market {
-    font-size: 3rem;
+  .heading-1-hwm,
+  .heading-2-hwm {
+    font-size: 4rem;
   }
-  .heading-1 {
+  .heading-1-hwm {
     margin-top: 3px;
   }
   .landing-left-market {
@@ -220,13 +265,13 @@
     /* margin-right: auto; */
   }
   .q-class-market {
-    width: 3rem;
-    padding-top: 6px;
+    width: 4rem;
+    padding-top: 7px;
   }
   .para-market {
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 18rem;
-    margin-top: -4rem;
+    margin-top: -5rem;
   }
   .normal-list {
     padding: 0rem 2rem;
@@ -237,5 +282,12 @@
   }
   .item-desc {
     width: 350px;
+  }
+  .our-services {
+    margin-top: 30px;
+    font-size: 1rem;
+  }
+  .worq-list {
+    margin-top: -120px;
   }
 }

@@ -6,6 +6,7 @@ import { HypeSQBLogo } from "../../../../Assets/svg";
 import { howWeMarketList } from "../data";
 import "../styles.css";
 import "./styles/howWeMarqet.css";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const HowWeMarqet = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -41,6 +42,7 @@ const HowWeMarqet = () => {
               onMouseEnter={() => handleMouseEnter(k)}
               style={{ color: `${hoveredIndex === k ? i.color : "black"}` }}
               onMouseLeave={() => handleMouseLeave()}
+              key={k}
             >
               {showBar === k ? (
                 <motion.div
@@ -127,7 +129,7 @@ const HowWeMarqet = () => {
       >
         <span className="hypeItUp">#hypeitup</span>
         <motion.h1
-          className="heading-1"
+          className="heading-1-hwm"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -135,7 +137,7 @@ const HowWeMarqet = () => {
           How we
         </motion.h1>
         <motion.h1
-          className="heading-2"
+          className="heading-2-hwm"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -160,6 +162,12 @@ const HowWeMarqet = () => {
             </span>
           )}
         </motion.div>
+        <div className="our-services">
+          <span>
+            <FiArrowUpRight />
+          </span>{" "}
+          <span>Our Services</span>
+        </div>
       </div>
     </div>
   );
