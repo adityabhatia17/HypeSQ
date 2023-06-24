@@ -21,7 +21,6 @@ const PastWorq = () => {
           : hoveredIdx === 1
           ? setHoveredIdx(2)
           : setHoveredIdx(0);
-        // console.log(hoveredIdx);
         return () => clearTimeout(timer);
       }, 2000);
     }
@@ -57,7 +56,7 @@ const PastWorq = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Our Latest
+          Our latest
         </motion.h1>
         <motion.h1
           className="heading-2-worq"
@@ -101,20 +100,8 @@ const PastWorq = () => {
                   gap: "1px",
                 }}
               >
-                <p
-                  style={{
-                    fontSize: "1rem",
-                  }}
-                >
-                  {i.headingText}
-                </p>
-                <p
-                  style={{
-                    fontSize: "1rem",
-                  }}
-                >
-                  {i.descriptionText}
-                </p>
+                <p>{i.headingText}</p>
+                <p>{i.descriptionText}</p>
               </div>
             </div>
           ))}

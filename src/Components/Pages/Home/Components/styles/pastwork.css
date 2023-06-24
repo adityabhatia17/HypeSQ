@@ -53,7 +53,8 @@
     display: none;
   }
   .worq-list {
-    width: 22.4rem;
+    width: 20rem;
+    margin-top: -120px;
   }
   .heading-1-worq {
     margin-top: 0px;
@@ -68,6 +69,9 @@
   .heading-1-worq,
   .heading-2-worq {
     font-size: 4rem;
+  }
+  .heading-2-worq {
+    margin-top: -25px;
   }
   .q-class-pw {
     width: 4rem;
@@ -84,28 +88,6 @@
     top: 2rem;
   }
   .landing-left-worq {
-    padding: 0rem 1rem;
-  }
-  .q-class-home {
-    width: 2.6rem;
-    padding-top: 7.3px;
-  }
-  .line-flex {
-    width: 17rem;
-  }
-  .red-line {
-    width: 6rem;
-  }
-  .diagonal-arrow {
-    font-size: 1.2rem;
-  }
-  .home-links-flex {
-    width: 20rem;
-  }
-  .homeImg {
-    margin-left: 0px;
-  }
-  .landing-right {
-    width: auto;
+    padding: 1rem 2rem;
   }
 }

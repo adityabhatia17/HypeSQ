@@ -5,6 +5,7 @@ import { HypeSQLogo } from "../../../../Assets/svg";
 import "../styles.css";
 import HowWeMarqet from "./HowWeMarqet";
 import PastWorq from "./PastWorq";
+import Footer from "./Footer";
 
 const Home: React.FC = () => {
   return (
@@ -153,8 +154,8 @@ const Home: React.FC = () => {
       {/* </Section> */}
       {/* <Section>
         <SpectacularClients />
-      </Section>
-      <Footer /> */}
+      </Section> */}
+      <Footer />
     </div>
   );
 };
